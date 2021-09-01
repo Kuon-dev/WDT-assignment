@@ -1,0 +1,32 @@
+.h1 {
+    color: #000000;
+}
+
+.header {
+    padding: 20px;
+    background: #b341a9;
+    color: #f1f1f1;
+    position:fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+}
+
+.content {
+    padding:20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
