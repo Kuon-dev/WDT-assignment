@@ -154,27 +154,23 @@ header {
 }
   
 #myBtn:hover {
-	background-color: red; /* Add a dark-grey background on hover */
+	background-color: #555; /* Add a dark-grey background on hover */
 }
 
 h1 {
 	margin-top: 20px;
-	color:blue;
-	border: blueviolet solid;
 }
 
 table.productContainer {
 	width: 1450px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 2px solid black;
 }
 
 table.productContainer td {
 	align-content: center;
 	justify-content: center;
 	text-align: center;
-	border: 2px solid orange;
 }
 
 div.imgContainer {
@@ -206,5 +202,4 @@ button.addToCart {
 
 button.addToCart:hover {
 	cursor: pointer;
-	color: red
 }
