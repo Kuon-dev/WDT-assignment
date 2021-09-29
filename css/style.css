@@ -45,6 +45,7 @@ header {
 	float: right;
 	line-height: 100px;
  	margin-right: 10%;
+	color: white;
 }
 
 .nav-bot {
@@ -54,6 +55,58 @@ header {
 	color: white;
 }
 
+.nav-bot ul {
+	float: left;
+}
+
+.nav-bot ul li {
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+
+.nav-bot ul li a {
+	font-family: 'Sora', sans-serif;
+	color: white;
+	text-decoration: none;
+	padding: 20px 14px;
+}
+
+.nav-bot ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #6d6d6d;
+	padding: 5px;
+}
+
+.nav-bot ul li:hover ul {
+	display: block;
+}
+
+.nav-bot ul li ul a {
+	padding: 8px 10px;
+	font-size: 22px;
+	text-align: left;
+	float: left;
+}
+
+.nav-bot ul li ul li {
+	width: 150px;
+}
+
+.nav-bot ul li ul li a {
+	padding: 7px 14px;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.nav-bot ul li ul li a:hover {
+	background-color: #535353;
+	width: 120px;
+}
+
 .nav-top-text {
 	text-decoration: none;
 	font-family: 'Sora', sans-serif;
@@ -61,6 +114,8 @@ header {
 	font-size: 25px;
 	margin: 0 10px;
 	color:white;
+	position: relative;
+	display: inline-block;
 }
 
 .nav-bot-text {
@@ -71,7 +126,6 @@ header {
 	margin: 0 10px;
 	color: white;
 }
-
 
 .content-area {
     position: relative;
@@ -97,9 +151,8 @@ header {
 	cursor: default;
 	padding: 15px;
 	border-radius: 4px;
-  
 }
   
 #myBtn:hover {
-	background-color: #555; /* Add a dark-grey background on hover */
+	background-color: red; /* Add a dark-grey background on hover */
 }

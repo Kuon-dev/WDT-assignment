@@ -21,5 +21,3 @@ function topFunction() {
 }
 
 // -----------
-
-document.write("Hello")
