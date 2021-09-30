@@ -11,7 +11,7 @@ body {
 }
 
 header {
-	height: 100px;
+	height: 12%;
 	background: #262626;
 	width: 100%;
 	z-index: 10;
@@ -19,9 +19,9 @@ header {
 }
 
 .navigation {
-	padding: 10px;
-	top: 100px;
-	height: 50px;
+	padding: 0.6%;
+	top: 10%;
+	height: 5%;
 	width: 100%;
 	z-index: 100;
 	position: fixed;
@@ -31,12 +31,12 @@ header {
 .logo {
 	width: 40%;
 	float: left;
-	line-height: 100px;
+	line-height: 700%;
 }
 
 .logo a {
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 1.875em;
 	font-family: 'Sora', sans-serif;
 	color:white;
 	letter-spacing: 5px;
@@ -51,7 +51,7 @@ header {
 
 .nav-bot {
 	float: left;
-	line-height: 39px;
+	line-height: 230%;
 	margin-left: 12%;
 	color: white;
 }
@@ -130,11 +130,11 @@ header {
 
 .content-area {
     position: relative;
-    top: 110px;
-    padding-top: 30px;
-	padding: 20px;
+    top: 10em;
+    padding-top: 1.875em;
+	padding: 1.25em;
 	font-family: 'Sora', sans-serif;
-	line-height: 30px;
+	line-height: 1.875em;
     margin: 0;
 }
 
