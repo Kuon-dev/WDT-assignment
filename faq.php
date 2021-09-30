@@ -39,7 +39,7 @@
     <br>
     <br>
     <div class="a-divider"></div>
-    <div class="content-area" style="margin-top: -300px; padding: 250px">
+    <div class="content-area" style="margin-top: -25em; padding: 20em">
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify"- >- Can I change or cancel my order?</h3></li>
         </ul>
@@ -93,5 +93,5 @@
         </ul>
     </div>
     </body>
-    <div id="footer" style="margin-top: -250px;"></div>
+    <div id="footer" style="margin-top: -20em;"></div>
 </html>

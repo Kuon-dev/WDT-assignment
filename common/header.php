@@ -27,9 +27,6 @@
             </nav>
           </div>
         </div>
-        <div>
-          <h2>TTTT</h2>
-        </div>
         <div class="navigation">
           <nav class="nav-bot">
             <ul>
