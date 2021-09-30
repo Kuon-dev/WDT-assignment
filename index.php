@@ -4,21 +4,24 @@
         <title>Paws Heaven</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <link href="css/style.css" rel="stylesheet">
+        
     </head>
     <body>
       <div>
         <header>
           <div>
             <div class="logo">
-              <a href="index.html">Paws Heaven</a>
+              <a href="index.php">Paws Heaven</a>
             </div>
           </div>
           <div>
             <nav class="nav-top">
-              <a href="#" class="nav-top-text">Contact</a> |
+              <a href="#" class="nav-top-text">Contact Us</a> |
               <a href="#" class="nav-top-text">T&C</a> |
-              <a href="#" class="nav-top-text">About Us</a> |
+              <a href="about-us.php" class="nav-top-text">About Us</a> |
               <a href="#" class="nav-top-text">Sign up</a> |
             </nav>
           </div>
@@ -222,37 +225,36 @@
                     </td>
                 </tr>
             </table>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-          </div>
+        
         </div>
-      </div>
-      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="a-divider"></div>
+        </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </body>
     <script src="js/functions.js"></script>
-    <div>
-      <footer>
-        <ul class="footer">
-          <li><a href="#" >Home</a></li>
-          <li><a href="#" >Features</a></li>
-          <li><a href="#" >Pricing</a></li>
-          <li><a href="#" >FAQs</a></li>
-          <li><a href="#" >About us</a></li>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Paws Heaven, all rights reserved</p>
+
+        <a href="index.php" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none font-sora text-muted">
+        Paws Heaven
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted font-sora">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted font-sora">Refund Policy</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted font-sora">FAQs</a></li>
         </ul>
-        <p>&copy; 2021 Company, Inc</p>
-      </footer>
+    </footer>
     </div>
+
 </html>
