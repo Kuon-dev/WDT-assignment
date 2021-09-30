@@ -7,6 +7,7 @@
 
 body {
 	text-align: center;
+	font-family: 'Sora', sans-serif;
 }
 
 header {
@@ -20,7 +21,7 @@ header {
 .navigation {
 	padding: 10px;
 	top: 100px;
-	height: 30px;
+	height: 50px;
 	width: 100%;
 	z-index: 100;
 	position: fixed;
@@ -202,4 +203,28 @@ button.addToCart {
 
 button.addToCart:hover {
 	cursor: pointer;
+}
+
+.footer-division {
+	background-color: white;
+}
+
+.a-divider {
+	height: 60px;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-divider {
+	height: 60px;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.font-sora {
+	font-family: 'Sora', sans-serif;
 }
