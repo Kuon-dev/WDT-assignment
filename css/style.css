@@ -1,0 +1,230 @@
+/* https://www.divinectorweb.com/2020/11/fixed-header-with-html-and-css.html */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	font-family: 'Sora', sans-serif;
+}
+
+header {
+	height: 100px;
+	background: #262626;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+
+.navigation {
+	padding: 10px;
+	top: 100px;
+	height: 50px;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	background-color: #535353;
+}
+
+.logo {
+	width: 40%;
+	float: left;
+	line-height: 100px;
+}
+
+.logo a {
+	text-decoration: none;
+	font-size: 30px;
+	font-family: 'Sora', sans-serif;
+	color:white;
+	letter-spacing: 5px;
+}
+
+.nav-top {
+	float: right;
+	line-height: 100px;
+ 	margin-right: 10%;
+	color: white;
+}
+
+.nav-bot {
+	float: left;
+	line-height: 39px;
+	margin-left: 12%;
+	color: white;
+}
+
+.nav-bot ul {
+	float: left;
+}
+
+.nav-bot ul li {
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+
+.nav-bot ul li a {
+	font-family: 'Sora', sans-serif;
+	color: white;
+	text-decoration: none;
+	padding: 20px 14px;
+}
+
+.nav-bot ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #6d6d6d;
+	padding: 5px;
+}
+
+.nav-bot ul li:hover ul {
+	display: block;
+}
+
+.nav-bot ul li ul a {
+	padding: 8px 10px;
+	font-size: 22px;
+	text-align: left;
+	float: left;
+}
+
+.nav-bot ul li ul li {
+	width: 150px;
+}
+
+.nav-bot ul li ul li a {
+	padding: 7px 14px;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.nav-bot ul li ul li a:hover {
+	background-color: #535353;
+	width: 120px;
+}
+
+.nav-top-text {
+	text-decoration: none;
+	font-family: 'Sora', sans-serif;
+	letter-spacing: 2px;
+	font-size: 25px;
+	margin: 0 10px;
+	color:white;
+	position: relative;
+	display: inline-block;
+}
+
+.nav-bot-text {
+	text-decoration: none;
+	font-family: 'Sora', sans-serif;
+	letter-spacing: 2px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: white;
+}
+
+.content-area {
+    position: relative;
+    top: 110px;
+    padding-top: 30px;
+	padding: 20px;
+	font-family: 'Sora', sans-serif;
+	line-height: 30px;
+    margin: 0;
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #262626;
+	color: white;
+	cursor: default;
+	padding: 15px;
+	border-radius: 4px;
+}
+  
+#myBtn:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+}
+
+h1 {
+	margin-top: 20px;
+}
+
+table.productContainer {
+	width: 1450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.productContainer td {
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+}
+
+div.imgContainer {
+	padding: 40px;
+}
+
+.IMG {
+	width: 90%;
+	transition: transform 0.2s;
+}
+
+.IMG:hover {
+	transform: scale(1.2);
+}
+
+td.productName {
+	padding: 10px;
+}
+
+td.productPrice {
+	padding: 5px;
+}
+
+button.addToCart {
+	margin: 5px;
+	background-color: white;
+	border: none;
+}
+
+button.addToCart:hover {
+	cursor: pointer;
+}
+
+.footer-division {
+	background-color: white;
+}
+
+.a-divider {
+	height: 60px;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-divider {
+	height: 60px;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.font-sora {
+	font-family: 'Sora', sans-serif;
+}
