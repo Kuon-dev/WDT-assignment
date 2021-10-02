@@ -65,7 +65,8 @@
     <br>
     <br>
     <div class="a-divider"></div>
-    <div class="content-area" style="margin-top: -300px; padding: 250px">
+    <div class="content-area" style="margin-top: -350px; padding: 250px">
+        <h2 class="font-sora fs-2 fw-bold">Paws Advice</h2>
         <div class="tab">
         <button class="tablinks" onclick="petAdvice(event, 'Dogs')" id="defaultOpen">Dogs</button>
         <button class="tablinks" onclick="petAdvice(event, 'Cats')">Cats</button>
