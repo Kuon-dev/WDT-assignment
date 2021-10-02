@@ -73,42 +73,42 @@
         </div>
         <div id="Dogs" class="tabcontent">
         <h3 class="font-sora fs-2 fw-bold">Tips For Every First-Time Dog Owner</h3>
-               <p class="font-sora fs-2 fw-bold">February is “Responsible Pet Owner” month, and that got us thinking: how do we view responsible pet ownership?
+         <p class="font-sora fs-2 fw-bold">February is “Responsible Pet Owner” month, and that got us thinking: how do we view responsible pet ownership?
         While there isn’t an exact definition for it the America Kennel Club gives each of us a great starting point for how we view pet ownership: 
         “Owning a dog is not just a privilege-it's a responsibility.” Whether you own a dog or a cat one thing is for sure, owning that pet comes with great responsibility.
         Pets are not accessories that can be thrown aside and forgotten. Pets are companions that need love, care and devotion.
         You can find many lists that outline very specific ways to be a responsible pet owner, like the American Kennel Club’s list for dog owners, 
         but we’ve compiled a short list for you of the important rules we think all pet owners must live by. 
         <br><br>
-        Make him part of the family.<br>
+        1. Make him part of the family.<br>
         Pets, especially dogs, need companionship. They are traditionally pack creatures and need the warmth and love that comes with living indoors with their family.
         <br><br>
-        Pet proof your house.<br>
+        2. Pet proof your house.<br>
         To keep your pet healthy you should research what household products and foods can harm your pet. Make sure these are kept in secure locations so your pet cannot get into them.
         <br><br>
-        Care for your pet.<br>
+        3. Care for your pet.<br>
         Regular visits to the vet and groomer are absolutely necessary. Insuring your pet may also be important to your pet’s health. Emergencies can happen at any time. 
         Ensure your pet gets the help he needs no matter the cost with pet insurance.
         <br><br>
-        Spay and neuter your pet.<br>
+        4. Spay and neuter your pet.<br>
         Studies have shown that pets that are spayed and neutered live healthier, longer lives. Plus, spayed a neutered pets are less likely to develop behavior problems.
         <br><br>
-        Always keep an ID tag on your pet. <br>
+        5. Always keep an ID tag on your pet. <br>
         Consider getting your pet microchipped as well to help identify him if he is lost or stolen.
         <br><br>
-        Train your pet to understand obedience. <br>
+        6. Train your pet to understand obedience. <br>
         Dogs should at least understand basic direction like “sit” and “stay.” In an emergency situation these cues could save your pet’s life.
         <br><br>
-        Give him the exercise he needs. <br>
+        7. Give him the exercise he needs. <br>
         All pets need regular exercise to stay fit and to release their energy. Without it, your pet will begin to act out. 
         Young pets that do not get enough exercise are more likely to develop negative behavioral issues that lead many to give up their pet.
         <br><br>
-        Feed him properly. <br>
+        8. Feed him properly. <br>
         Ask your vet what type of food and how much is right for you pet. Keeping your pet on a regular, portion controlled diet will help with weight management and prevent weight related health problems.
         <br><br>
-        Socialize your pet. <br>
-        Meeting new people and other pets improves the confidence of your pet. Plus, having extra playmates will help relieve some of your pet’s built-up energy.<br>
-        Love your pet. <br><br>
+        9. Socialize your pet. <br>
+        Meeting new people and other pets improves the confidence of your pet. Plus, having extra playmates will help relieve some of your pet’s built-up energy.<br><br>
+        10. Love your pet. <br>
         You are your pet’s favorite thing in the whole world. He craves your love, attention and care. So show him the love and devotion he shows you!
         <br><br>
         Written By: PetSafe Guest, N.d.</p>
