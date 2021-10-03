@@ -7,7 +7,6 @@
 
 body {
 	text-align: center;
-	font-family: 'Sora', sans-serif;
 }
 
 header {
@@ -133,7 +132,6 @@ header {
     top: 110px;
     padding-top: 30px;
 	padding: 20px;
-	font-family: 'Sora', sans-serif;
 	line-height: 30px;
     margin: 0;
 }
