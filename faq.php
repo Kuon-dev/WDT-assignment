@@ -4,7 +4,7 @@
         <title>Paws Heaven</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
@@ -39,7 +39,7 @@
     <br>
     <br>
     <div class="a-divider"></div>
-    <div class="content-area" style="margin-top: -300px; padding: 250px">
+    <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify"- >- Can I change or cancel my order?</h3></li>
         </ul>
@@ -93,5 +93,5 @@
         </ul>
     </div>
     </body>
-    <div id="footer" style="margin-top: -250px;"></div>
+    <div id="footer"></div>
 </html>
