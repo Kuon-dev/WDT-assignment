@@ -20,7 +20,7 @@
 
         <!-- Sign Up Form -->
         <div class="register-form sign-up-area">
-            <form action="insert.php" method="POST">
+            <form action="signup.php" method="POST">
                 <h1>Create Account</h1>
                 <!-- Request Name -->
                 <input type="text" placeholder="Name" name="SignUp_name"  required/>
@@ -39,7 +39,7 @@
 
         <!-- Sign In Form -->
         <div class="register-form sign-in-area">
-            <form action="#" method="POST">
+            <form action="login.php" method="POST">
                 <h1>Sign in</h1>
                 <!-- Request Email -->
                 <input type="email" placeholder="Email" name="SignIn_email" required/>
@@ -90,4 +90,8 @@
 		$SignUp_address=$_POST["SignUp_address"];
 		$SignUp_password=$_POST["SignUp_password"];
 		}
+     else if(isset($_POST["SignIn_button"])){
+        $SignIn_email=$_POST["SignIn_email"];
+        $SignIn_password=$_POST["SignIn_password"];
+        }
 ?>
