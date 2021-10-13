@@ -21,7 +21,7 @@
     <div class="a-divider"></div>
     </body>
     <script src="js/functions.js"></script>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -33,7 +33,7 @@
 
         <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted font-sora">Home</a></li>
-        <li class="nav-item"><a href="refund-policy.php" class="nav-link px-2 text-muted font-sora">Refund Policy</a></li>
+        <li class="nav-item"><a href="privacy-policy.php" class="nav-link px-2 text-muted font-sora">Privacy Policy</a></li>
         <li class="nav-item"><a href="faq.php" class="nav-link px-2 text-muted font-sora">FAQs</a></li>
         </ul>
     </footer>

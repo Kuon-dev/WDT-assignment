@@ -7,9 +7,10 @@
 
 body {
 	text-align: center;
-	font-family: 'Sora', sans-serif;
 }
 
+/* Header section */
+/* ============================================= */
 header {
 	height: 100px;
 	background: #262626;
@@ -128,12 +129,15 @@ header {
 	color: white;
 }
 
+/* ============================================= */
+/* Content area */
+/* ============================================= */
+
 .content-area {
     position: relative;
     top: 110px;
     padding-top: 30px;
 	padding: 20px;
-	font-family: 'Sora', sans-serif;
 	line-height: 30px;
     margin: 0;
 }
@@ -162,6 +166,10 @@ h1 {
 	margin-top: 20px;
 }
 
+/* ============================================= */
+/* Tables */
+/* ============================================= */
+
 table.productContainer {
 	width: 1450px;
 	margin-left: auto;
@@ -175,7 +183,7 @@ table.productContainer td {
 }
 
 div.imgContainer {
-	padding: 40px;
+	padding: 30px;
 }
 
 .IMG {
@@ -209,6 +217,10 @@ button.addToCart:hover {
 	background-color: white;
 }
 
+/* ============================================= */
+/* Footer Division */
+/* ============================================= */
+
 .a-divider {
 	height: 60px;
 	background-color: rgba(0, 0, 0, .1);
@@ -227,4 +239,184 @@ button.addToCart:hover {
 
 .font-sora {
 	font-family: 'Sora', sans-serif;
+}
+
+/* ============================================= */
+/* Prodcuts */
+/* ============================================= */
+
+.card {
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+nav.productNav {
+    width: 100%;
+    color: #727272;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 2px solid #efefef;
+    font-size: 12px;
+}
+
+nav svg.heart {
+    height: 24px;
+    width: 24px;
+    float: right;
+    margin-top: -3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav svg.heart:hover {
+    fill: red;
+}
+
+svg.arrow {
+    float: left;
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.photo {
+    padding: 30px;
+    width: 45%;
+    text-align: center;
+    float: left;
+    border-bottom: 1px solid #efefef;
+}
+
+.photo img { 
+    height: 324px; 
+}
+
+.description {
+    padding: 30px;
+    float: left;
+    width: 55%;
+    height: 324px;
+    border-left: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.description h1 {
+    color: #515151;
+    font-weight: 300;
+    padding-top: 15px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.description h2 {
+   color: #515151;
+   margin: 0;
+   text-transform: uppercase;
+   font-weight: 500;
+}
+ 
+.description h4 { 
+    margin: 0;
+    color: #727272;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px
+}
+ 
+.description p { 
+    font-size: 12px; 
+    line-height: 20px;
+    color: #727272;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+}
+
+.quantity input {
+    -webkit-appearance: none;
+    border: 1px solid #d9d9d9;
+    padding: 8px;
+    text-align: center;
+    width: 15%;
+    height: 10%;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+.plus-btn,
+.minus-btn {
+    border: 1px solid #d9d9d9;
+    background: none;
+    width: 10%;
+    height: 10%;
+    margin-bottom: 10px;
+}
+
+.card button:focus,
+.card input:focus {
+    outline:0;
+}
+ 
+.addToCart-btn {
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 8px 0px;
+    margin-bottom: 30px;
+    color: #515151;
+    text-transform: uppercase;
+    width: 125px;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.description button:hover {
+    background: darken(white, 2%);
+    border: 1px solid #aedaa6;
+    color: #aedaa6;
+    cursor: pointer;
+    
+}
+
+.reviewTitle {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.review {
+    width: 65%;
+    overflow-x: auto;
+    margin: auto;
+    border-spacing: 30px 0;
+    overflow-wrap: break-word;
+}
+
+.nameDisplay {
+    padding: 15px 0;
+}
+
+.reviewDisplay {
+    border: 1px solid black;
+    padding: 10px;
 }

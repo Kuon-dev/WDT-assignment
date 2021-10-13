@@ -15,7 +15,7 @@
         }
 
         body {
-            background: linear-gradient(to right, plum , purple);
+            background: linear-gradient(to right, plum , rgb(206, 189, 206));
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -47,9 +47,9 @@
             Hey Buddy, your account has been created!
         </h1>
         <h1>
-            Login and start your journey now!
+            Let's start your journey now!
         </h1>
-        <img src="happydoggy.jpg">
+        <img src="image/happydoggy.jpg">
     </div>
 
     <script>
@@ -59,7 +59,7 @@
         setInterval(function() {
         seconds --;
         if (seconds == 0) {
-            window.location = "Registration_Panel.html";
+            window.location = "index.php";
         }
         },1000)
 
