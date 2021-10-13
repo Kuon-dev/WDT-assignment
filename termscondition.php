@@ -41,7 +41,7 @@
     <br>
     <br>
     <br>
-    <img src="image/faqs.jpeg" width="1000px">
+    <img src="image/terms-and-condition.jpeg" height="400px" width="1000px">
     <br>
     <br>
     <div class="a-divider"></div>
@@ -73,12 +73,12 @@
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify">- PROHIBITIONS</h3></li>
         </ul>
-            <p class="font-sora fs-4 " align="justify">You must not use the Site in a way that could result in criminal charges under the Computer Misuse 
+            <p class="font-sora fs-4 " align="justify">- You must not use the Site in a way that could result in criminal charges under the Computer Misuse 
                 and Cybersecurity Act.</p>
-                <p class="font-sora fs-4 " align="justify">You may not otherwise copy, modify, or distribute the Site's contents without PawsHeaven written permission. 
+                <p class="font-sora fs-4 " align="justify">- You may not otherwise copy, modify, or distribute the Site's contents without PawsHeaven written permission. 
                     You may also not modify, publish, transmit, participate in the transfer of, sell, create derivative works from, 
                     or otherwise exploit any of the Site's content or Intellectual Property, in whole or in part.</p>
-                <p class="font-sora fs-4 " align="justify">You agree to not use the Site for the following purposes:</p>
+                <p class="font-sora fs-4 " align="justify">- You agree to not use the Site for the following purposes:</p>
                 <dt>
                     <dd class="font-sora fs-5" align="justify">- Posting, communicating, or transmitting any material that violates another person's or entity's intellectual property, 
                         publicity, or privacy rights;</dd>
@@ -103,12 +103,12 @@
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify">- DELIVERY</h3></li>
         </ul>
-            <p class="font-sora fs-4 " align="justify">We strive to deliver your Order(s) to you at the location specified by you in your Order. 
+            <p class="font-sora fs-4 " align="justify">- We strive to deliver your Order(s) to you at the location specified by you in your Order. 
                 We will notify you if we expect to be unable to meet our estimated delivery date, but we will not be liable to you for any losses, 
                 liabilities, costs, damages, charges, or expenses arising from late delivery to the extent permitted by law.</p>
-            <p class="font-sora fs-4 " align="justify">You acknowledge that the products are standard and are not made to your specifications, 
+            <p class="font-sora fs-4 " align="justify">- You acknowledge that the products are standard and are not made to your specifications, 
                 or to meet any special needs that you may have.</p>
-            <p class="font-sora fs-4 " align="justify">Unless otherwise stated, shipping and handling fees are included with your Order(s). For loss or damage claims, you must notify us (via emailing grace@perrocompany.com) within twenty-eight (28) days 
+            <p class="font-sora fs-4 " align="justify">- Unless otherwise stated, shipping and handling fees are included with your Order(s). For loss or damage claims, you must notify us (via emailing grace@perrocompany.com) within twenty-eight (28) days 
                 of the proposed delivery date if you believe all or part of your order is missing and/or damaged. Kindly refer to our 
                 Returns & Refunds Policy below for more details.</p>
             <br>
@@ -116,7 +116,7 @@
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify">- Return Policy</h3></li>
         </ul>
             <dl>
-                <p class="font-sora fs-4 " align="justify">Proof of purchase is required for all returns, which can be in the form of your receipt/tax invoice, a debit/credit card statement, member's club transaction history, or online purchase transaction history.
+                <p class="font-sora fs-4 " align="justify">- Proof of purchase is required for all returns, which can be in the form of your receipt/tax invoice, a debit/credit card statement, member's club transaction history, or online purchase transaction history.
                 The products muast be returned within 28 days of purchase with original condition. You are entitled to a refund, replacement or credit from PawsHeaven when an item purchased have any issues, i.e. the product:</p>
                 <dt>
                     <dd class="font-sora fs-5" align="justify">- Is faulty or of unacceptable quality</dd>
@@ -125,7 +125,8 @@
                     <dd class="font-sora fs-5" align="justify">- Is not delivered in a reasonable time frame</dd>
                     <dd class="font-sora fs-5" align="justify">- Proof of purchase must be provided (proof of purchase details are outlined above)</dd>
                 </dt>
-                <p class="font-sora fs-4 " align="justify">To request for a refund, please head to the Contact Us section.</p>
+                <br>
+                <p class="font-sora fs-4 " align="justify">- To request for a refund, please head to the Contact Us section.</p>
                 <p class="font-sora fs-4 " align="justify"></p>
                 <p class="font-sora fs-4 " align="justify"></p>
             </dl>

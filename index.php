@@ -13,19 +13,41 @@
                 $("#header").load("common/header.php");
                 $("#footer").load("common/footer.php");
             });
-
+        
         </script>
+        <style>
+        .banner-area {
+            width: 100%;
+            height: 450px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(image/about-us.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            padding-bottom: 10px;
+            margin-top: 110px;
+            background-color: black;
+        }
+        .banner-area h2 {
+            padding-top: 8%;
+            font-size: 70px;
+            filter: brightness(2000%);
+            color: white;
+        }
+        </style>
+
     </head>
     <body>
     <div id="header"></div>
-    <div class="content-area">
+    <div class="banner-area">
+        <h2 class="poppins fw-bolder">Welcome to PawsHeaven</h2>
+        <h3 class="poppins fs-2 fw-bolder text-white" stlye="color: white;">Largest Online Pet Store in Malaysia</h3>
+    </div>
+    <div class="a-divider"></div>
+    <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
           <div>
-            <h2>content area</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto perspiciatis suscipit voluptatibus! Ad alias assumenda autem deleniti esse est excepturi hic itaque, magnam magni nam officia provident quae recusandae reiciendis rem sed. Adipisci animi aut autem deserunt dolore, ea eius error ex facilis inventore ipsum minus modi nihil nostrum nulla, obcaecati porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis praesentium rerum sapiente.</p>
+            <h2 class="sora center fs-1 fw-bolder">Popular Products</h2>
             <br>
-            <br>
-            <br>
-            <br>
+            <hr>
             <table class="productContainer">
             <!-- 1st Row -->
                 <tr>
@@ -86,21 +108,6 @@
                     </td>
                     <td class="productPrice">
                         (RM40.00)
-                    </td>
-                </tr>
-                <!-- 4th Row -->
-                <tr>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
                     </td>
                 </tr>
             </table>
@@ -166,21 +173,6 @@
                     </td>
                     <td class="productPrice">
                         (RM80.00)
-                    </td>
-                </tr>
-                <!-- 8th Row -->
-                <tr>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
-                    </td>
-                    <td class="addToCart">
-                        <button class="addToCart">Add to Cart</button>
                     </td>
                 </tr>
             </table>
