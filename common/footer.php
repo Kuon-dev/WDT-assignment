@@ -33,7 +33,7 @@
 
         <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted font-sora">Home</a></li>
-        <li class="nav-item"><a href="refund-policy.php" class="nav-link px-2 text-muted font-sora">Refund Policy</a></li>
+        <li class="nav-item"><a href="privacy-policy.php" class="nav-link px-2 text-muted font-sora">Privacy Policy</a></li>
         <li class="nav-item"><a href="faq.php" class="nav-link px-2 text-muted font-sora">FAQs</a></li>
         </ul>
     </footer>

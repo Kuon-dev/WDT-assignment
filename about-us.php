@@ -22,17 +22,17 @@
       <div>
         <div>
           <p class="sora fs-2 fw-bold">About Us</p>
-          <p class="sora">Paws Heaven is an online pet store that sells pet toys, foods, accessories and pet related products from various brands for common household cats and dogs in Malaysia. Paws Heaven was born in 2021. 
+          <p class="sora fs-4" align="center">Paws Heaven is an online pet store that sells pet toys, foods, accessories and pet related products from various brands for common household cats and dogs in Malaysia. Paws Heaven was born in 2021. 
           The founders decided to start up this business as it is not convenient to buy pet related things in store during this Covid-19 pandemic. Therefore, we decided to run our business online. 
           Althought we are new in this aspect, but we promise to provide hight quality products and good customer services.</p>
           <img src="image/about-us.jpg" width="500">
           <br>
           <br>
           <h2>Our Vision</h2>
-          <p>To Be the Most Respected Pet Company in Global Market.</p>
+          <p class="sora fs-4" align="center">To Be the Most Respected Pet Company in Global Market.</p>
           <br>
           <h2>Our Mission</h2>
-          <p>To Provide the Most Trustworthy Pet Products and Service to Global Market</p>
+          <p class="sora fs-4" align="center">To Provide the Most Trustworthy Pet Products and Service to Global Market</p>
         </div>
       </div>
     </div>
