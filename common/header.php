@@ -30,7 +30,7 @@
           <h2>TTTT</h2>
         </div>
         <div class="navigation">
-          <nav class="nav-bot">
+          <nav class="nav-bot" style="margin-top: -2px;">
             <ul>
               <li>| <a href="#" class="nav-bot-text">Dogs ▾</a>|
               <ul>
