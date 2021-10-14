@@ -23,7 +23,6 @@
               <a href="termscondition.php" class="nav-top-text">T&C</a> |
               <a href="about-us.php" class="nav-top-text">About Us</a> |
               <a href="registration_panel.php" class="nav-top-text">Sign up</a> |
-              <!-- PHP here !-->
             </nav>
           </div>
         </div>
