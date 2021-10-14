@@ -1,21 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- common meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-withd, initial-scale=1">
-
-    <!-- import css file -->
-    <link rel="stylesheet" href="Registration_panel.css">
-
-    <!-- import javascript file -->
+<html>
+    <head>
+        <title>Paws Heaven</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script>
+            $(function(){ 
+                $("#header").load("common/header.php");
+                $("#footer").load("common/footer.php");
+            });
+        
+        </script>
 
     <!-- website title -->
     <title>Paws Heaven Member Register</title>
+    <style>
+        .background {
+            width: 100%;
+            height: 120%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(image/login-background.png);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            background-color: black;
+            position: fixed;
+        }
+
+        * {
+	    box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f5f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            height: 90vh;
+            margin: 20px 0 20px;
+        }
+
+        .container h1 {
+            font-weight: bold;
+            margin: 0 0 0 50;
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .overlay p {
+            font-size: 18px;
+            font-weight: 100;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            margin: 20px 0 30px;
+        }
+
+        .sign-in-area a {
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+            margin: 15px 0;
+        }
+
+        .container button {
+            border-radius: 20px;
+            border: 1px solid rgb(226, 187, 226);
+            background-color:rgb(219, 191, 221);
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 12px 45px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+        }
+
+        .container button:active {
+            transform: scale(0.95);
+        }
+
+        .container button:focus {
+            outline: none;
+        }
+
+        .container button.ghost {
+            background-color: transparent;
+            border-color: #FFFFFF;
+        }
+
+        .container form {
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 50px;
+            height: 100%;
+            text-align: center;
+        }
+
+        .container input {
+            background-color: #eee;
+            border: none;
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 100%;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                    0 10px 10px rgba(0,0,0,0.22);
+            position: relative;
+            overflow: hidden;
+            width: 768px;
+            max-width: 100%;
+            min-height: 500px;
+        }
+
+        .register-form {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .sign-in-area {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .container.right-panel-active .sign-in-area {
+            transform: translateX(100%);
+        }
+
+        .sign-up-area {
+            left: 0;
+            width: 50%;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .container.right-panel-active .sign-up-area {
+            transform: translateX(100%);
+            opacity: 1;
+            z-index: 5;
+            animation: show 0.6s;
+        }
+
+        @keyframes show {
+            0%, 49.99% {
+                opacity: 0;
+                z-index: 1;
+            }
+            
+            50%, 100% {
+                opacity: 1;
+                z-index: 5;
+            }
+        }
+
+        .overlay-area {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.6s ease-in-out;
+            z-index: 100;
+        }
+
+        .container.right-panel-active .overlay-area{
+            transform: translateX(-100%);
+        }
+
+        .overlay {
+            background: #e9b2cd;
+            background: -webkit-linear-gradient(to right, #dfa6c7, #ec92b8);
+            background: linear-gradient(to right,#dfa6c7, #dfa6c7);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+            color: #FFFFFF;
+            position: relative;
+            left: -100%;
+            height: 100%;
+            width: 200%;
+            transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .container.right-panel-active .overlay {
+            transform: translateX(50%);
+        }
+
+        .overlay-panel {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .overlay-left {
+            transform: translateX(-20%);
+        }
+
+        .container.right-panel-active .overlay-left {
+            transform: translateX(0);
+        }
+
+        .overlay-right {
+            right: 0;
+            transform: translateX(0);
+        }
+
+        .container.right-panel-active .overlay-right {
+            transform: translateX(20%);
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="background"></div>
     <div class="container" id="container">
 
         <!-- Sign Up Form -->
@@ -77,7 +301,19 @@
     </div>
 
     <!-- import javascript file -->
-    <script src="Registration_Panel.js"></script>
+    <script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+        </script>
 
 </body>
 </html>
