@@ -104,7 +104,7 @@
         $contact_email=$_POST["contact_email"];
         $message=$_POST["message"];
         include("conn.php");
-        $sql="INSERT INTO contact (Name, Email, Message)
+        $sql="INSERT INTO message (Name, Email, Message)
         VALUES
         ('$_POST[contact_name]','$_POST[contact_email]','$_POST[message]')";
         if (!mysqli_query($con,$sql)) {
