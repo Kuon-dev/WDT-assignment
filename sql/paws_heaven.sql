@@ -65,7 +65,8 @@ INSERT INTO `category` (`Category_ID`, `Category`) VALUES
 ('C003', 'Hygiene'),
 ('C004', 'Vitamins'),
 ('C005', 'Cage'),
-('C006', 'Packages');
+('C006', 'Packages'),
+('C007', 'Discount');
 
 -- --------------------------------------------------------
 
@@ -159,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`Product_ID`, `Product_Name`, `Brand`, `Animal_ID`, `Category_ID`, `Description`, `Price`, `Quantity`, `Product_Status`, `Supplier_ID`, `Staff_ID`) VALUES
 (1, 'Acana Adult Dog Chicken & Greens Dry Dog Food', 'Acana', 'A001', 'C001', '11.4kg per pack. The product include 2 2/3kg Free-run chicken, 700g Wild-caught fish, 240g Cage-free eggs.', 291, 100, 'In Stock', 'S001', 'W001'),
 (2, 'Addiction Grain Free Kangaroo & Apple Dry Dog Food', 'Addiction', 'A001', 'C001', '1.8kg per pack. The product discover Australia’s best-kept pet food secret, the Wild Kangaroo, with Addiction’s Wild Kangaroo & Apples. Wild kangaroo meat contains the highest levels of Conjugated Linoleic Acid (CLA) of any red meat. Wild kangaroo meat is also prized as a lean, high-quality game meat with only 2% fat. This unique formula contains apples rich in antioxidants and pectin for vitality and digestive health. Addiction’s Wild Kangaroo & Apples ensures your dog receives a balanced, wellness-giving meal with an unbeatable flavor.', 74.8, 100, 'In Stock', 'S002', 'W001'),
-(3, 'Aixia Kin-Can Mini Tuna With Dried Skipjack', 'Aixia', 'A002', 'C001', '70g per can. The product is wet cat canned food made in Japan. It is Tuna based with water canned food.', 5.2, 100, 'In Stock', 'S003', 'W001'),
+(3, 'Aixia Kin-Can Mini Tuna With Dried Skipjack', 'Aixia', 'A002', 'C007', '70g per can. The product is wet cat canned food made in Japan. It is Tuna based with water canned food.', 4.7, 100, 'In Stock', 'S003', 'W001'),
 (4, 'Acana Grasslands Cat Dry Food', 'Acana', 'A002', 'C001', '1.8kg per pack. ACANA Grasslands is brimming with free-run chicken, turkey, and duck, cage-free eggs, and wild-caught fish, in WholePrey ratios of meat, organs, cartilage, and bone. ', 97.2, 100, 'In Stock', 'S001', 'W001'),
 (5, 'Cindy & Friends Tofu Litter Green Tea ', 'Cindy & Friends', 'A002', 'C003', '2.8kg per pack. Cindy & Friends Eco-Friendly & Ultra Absorbent Tofu Litter with Qik-Clump technology + antibacterial is made from 100% natural plant based fibers. Created from human grade food fibers, our tofu litter has over three times the absorption power, trapping and locking in liquids almost instantly. The eco-friendly antibacterial technology kills harmful bacteria, neutralizes toxins and smell from bio-waste thus, keeping the environment clean from unpleasant odour. Formulated free of chemicals, our tofu litter does not contain any synthetic additives and is 100% sustainable and biodegradable.', 20.9, 100, 'In Stock', 'S004', 'W001'),
 (6, 'DC Super Absorbent Doggy Pads', 'DC', 'A001', 'C003', '50 pcs per pack. Dimension: 60cm x 45cm', 49, 200, 'In Stock', 'S005', 'W001'),
