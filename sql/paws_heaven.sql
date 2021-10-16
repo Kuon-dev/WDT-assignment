@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 13, 2021 at 04:34 PM
+-- Generation Time: Oct 16, 2021 at 08:28 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -24,62 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `animal`
---
-
-DROP TABLE IF EXISTS `animal`;
-CREATE TABLE IF NOT EXISTS `animal` (
-  `Animal_ID` varchar(20) NOT NULL,
-  `Animal` varchar(50) NOT NULL,
-  PRIMARY KEY (`Animal_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `animal`
---
-
-INSERT INTO `animal` (`Animal_ID`, `Animal`) VALUES
-('A001', 'Dog'),
-('A002', 'Cat');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
-
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE IF NOT EXISTS `category` (
-  `Category_ID` varchar(20) NOT NULL,
-  `Category` varchar(50) NOT NULL,
-  PRIMARY KEY (`Category_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `category`
---
-
-INSERT INTO `category` (`Category_ID`, `Category`) VALUES
-('C001', 'Food'),
-('C002', 'Toys'),
-('C003', 'Hygiene'),
-('C004', 'Vitamins'),
-('C005', 'Cage'),
-('C006', 'Packages'),
-('C007', 'Discount');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `feedback`
 --
 
 DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
+  `Order_ID` varchar(20) NOT NULL,
   `Member_ID` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Review` text NOT NULL,
-  PRIMARY KEY (`Member_ID`,`Product_ID`)
+  PRIMARY KEY (`Order_ID`,`Member_ID`,`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -98,6 +52,13 @@ CREATE TABLE IF NOT EXISTS `member` (
   PRIMARY KEY (`Email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`Email`, `Member_Name`, `Contact_Number`, `Address`, `Password`) VALUES
+('mm@gmail.com', 'mmm', '0138976672', 'mm', 'mm');
+
 -- --------------------------------------------------------
 
 --
@@ -111,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `Email` varchar(50) NOT NULL,
   `Message` text NOT NULL,
   PRIMARY KEY (`Message_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -142,8 +103,8 @@ CREATE TABLE IF NOT EXISTS `product` (
   `Product_ID` int(20) NOT NULL AUTO_INCREMENT,
   `Product_Name` varchar(50) NOT NULL,
   `Brand` varchar(50) NOT NULL,
-  `Animal_ID` varchar(20) NOT NULL,
-  `Category_ID` varchar(20) NOT NULL,
+  `Type of Animal` varchar(20) NOT NULL,
+  `Category` varchar(20) NOT NULL,
   `Description` text NOT NULL,
   `Price` float NOT NULL,
   `Quantity` int(11) NOT NULL,
@@ -157,21 +118,21 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`Product_ID`, `Product_Name`, `Brand`, `Animal_ID`, `Category_ID`, `Description`, `Price`, `Quantity`, `Product_Status`, `Supplier_ID`, `Staff_ID`) VALUES
-(1, 'Acana Adult Dog Chicken & Greens Dry Dog Food', 'Acana', 'A001', 'C001', '11.4kg per pack. The product include 2 2/3kg Free-run chicken, 700g Wild-caught fish, 240g Cage-free eggs.', 291, 100, 'In Stock', 'S001', 'W001'),
-(2, 'Addiction Grain Free Kangaroo & Apple Dry Dog Food', 'Addiction', 'A001', 'C001', '1.8kg per pack. The product discover Australia’s best-kept pet food secret, the Wild Kangaroo, with Addiction’s Wild Kangaroo & Apples. Wild kangaroo meat contains the highest levels of Conjugated Linoleic Acid (CLA) of any red meat. Wild kangaroo meat is also prized as a lean, high-quality game meat with only 2% fat. This unique formula contains apples rich in antioxidants and pectin for vitality and digestive health. Addiction’s Wild Kangaroo & Apples ensures your dog receives a balanced, wellness-giving meal with an unbeatable flavor.', 74.8, 100, 'In Stock', 'S002', 'W001'),
-(3, 'Aixia Kin-Can Mini Tuna With Dried Skipjack', 'Aixia', 'A002', 'C007', '70g per can. The product is wet cat canned food made in Japan. It is Tuna based with water canned food.', 4.7, 100, 'In Stock', 'S003', 'W001'),
-(4, 'Acana Grasslands Cat Dry Food', 'Acana', 'A002', 'C001', '1.8kg per pack. ACANA Grasslands is brimming with free-run chicken, turkey, and duck, cage-free eggs, and wild-caught fish, in WholePrey ratios of meat, organs, cartilage, and bone. ', 97.2, 100, 'In Stock', 'S001', 'W001'),
-(5, 'Cindy & Friends Tofu Litter Green Tea ', 'Cindy & Friends', 'A002', 'C003', '2.8kg per pack. Cindy & Friends Eco-Friendly & Ultra Absorbent Tofu Litter with Qik-Clump technology + antibacterial is made from 100% natural plant based fibers. Created from human grade food fibers, our tofu litter has over three times the absorption power, trapping and locking in liquids almost instantly. The eco-friendly antibacterial technology kills harmful bacteria, neutralizes toxins and smell from bio-waste thus, keeping the environment clean from unpleasant odour. Formulated free of chemicals, our tofu litter does not contain any synthetic additives and is 100% sustainable and biodegradable.', 20.9, 100, 'In Stock', 'S004', 'W001'),
-(6, 'DC Super Absorbent Doggy Pads', 'DC', 'A001', 'C003', '50 pcs per pack. Dimension: 60cm x 45cm', 49, 200, 'In Stock', 'S005', 'W001'),
-(7, 'Trixie Denta Fun Ball 6cm Dog Toy', 'Trixie', 'A001', 'C002', 'The product is made of natural rubber. Its diameter is 6cm', 33.8, 50, 'In Stock', 'S006', 'W001'),
-(8, 'Trustie Carrier', 'Trustie', 'A001', 'C005', 'A carrier for cats and small dogs. Size:\r\n54 x 33.5 x 30 cm', 130, 40, 'In Stock', 'S008', 'W001'),
-(9, 'Himalaya Immunol Tablets for Immunity ', 'Himalaya', 'A001', 'C004', '60 tabs per bottle. The product is suitable for cats and dogs.', 30, 40, 'In Stock', 'S007', 'W001'),
-(10, 'Trixie Cat Activity Brain Mover Strategy Game', 'Trixie', 'A002', 'C002', 'The product is made of plastic and it has 4 different modules that present different tasks, including a board game with 2 ball-shaped covers and various small hollows and drawers. It is non-slip due to rubber feet. Size:25x20cm', 154.9, 30, 'In Stock', 'S006', 'W001'),
-(11, 'Himalaya Digyton Digestive Drops', 'Himalaya', 'A002', 'C004', '30ml per bottel. Digyton is a herbomineral formulation that works to stimulate the appetite and reduce attacks of common gastrointestinal complaints. These include diarrhoea, colic distention, flatulence, constipation, cramps, and other GI upsets.', 16, 100, 'In Stock', 'S007', 'W001'),
-(12, 'Trustie Carrier (Assorted)', 'Trustie', 'A002', 'C005', 'Size:48.5 X W 32 X H 30 cm', 89.6, 30, 'In Stock', 'S008', 'W001'),
-(13, 'Doggy Mystery Box', 'Aixia', 'A001', 'C006', 'There are different types of products including food, toys, cage and so on in the mystery box. The value of the box is over RM350.', 289, 30, 'In Stock', 'S003', 'W001'),
-(14, 'Kittie Mystery Box', 'Acana', 'A002', 'C006', 'There are different types of products including food, toys, cage and so on in the mystery box. The value of the box is over RM400.', 350, 30, 'In Stock', 'S001', 'W001');
+INSERT INTO `product` (`Product_ID`, `Product_Name`, `Brand`, `Type of Animal`, `Category`, `Description`, `Price`, `Quantity`, `Product_Status`, `Supplier_ID`, `Staff_ID`) VALUES
+(1, 'Acana Adult Dog Chicken & Greens Dry Dog Food', 'Acana', 'Dog', 'Discount', '11.4kg per pack. The product include 2 2/3kg Free-run chicken, 700g Wild-caught fish, 240g Cage-free eggs.', 278, 100, 'In Stock', 'S001', 'W001'),
+(2, 'Addiction Grain Free Kangaroo & Apple Dry Dog Food', 'Addiction', 'Dog', 'Food', '1.8kg per pack. The product discover Australia’s best-kept pet food secret, the Wild Kangaroo, with Addiction’s Wild Kangaroo & Apples. Wild kangaroo meat contains the highest levels of Conjugated Linoleic Acid (CLA) of any red meat. Wild kangaroo meat is also prized as a lean, high-quality game meat with only 2% fat. This unique formula contains apples rich in antioxidants and pectin for vitality and digestive health. Addiction’s Wild Kangaroo & Apples ensures your dog receives a balanced, wellness-giving meal with an unbeatable flavor.', 74.8, 100, 'In Stock', 'S002', 'W001'),
+(3, 'Aixia Kin-Can Mini Tuna With Dried Skipjack', 'Aixia', 'Cat', 'Discount', '70g per can. The product is wet cat canned food made in Japan. It is Tuna based with water canned food.', 4.7, 100, 'In Stock', 'S003', 'W001'),
+(4, 'Acana Grasslands Cat Dry Food', 'Acana', 'Cat', 'Food', '1.8kg per pack. ACANA Grasslands is brimming with free-run chicken, turkey, and duck, cage-free eggs, and wild-caught fish, in WholePrey ratios of meat, organs, cartilage, and bone. ', 97.2, 100, 'In Stock', 'S001', 'W001'),
+(5, 'Cindy & Friends Tofu Litter Green Tea ', 'Cindy & Friends', 'Cat', 'Hygiene', '2.8kg per pack. Cindy & Friends Eco-Friendly & Ultra Absorbent Tofu Litter with Qik-Clump technology + antibacterial is made from 100% natural plant based fibers. Created from human grade food fibers, our tofu litter has over three times the absorption power, trapping and locking in liquids almost instantly. The eco-friendly antibacterial technology kills harmful bacteria, neutralizes toxins and smell from bio-waste thus, keeping the environment clean from unpleasant odour. Formulated free of chemicals, our tofu litter does not contain any synthetic additives and is 100% sustainable and biodegradable.', 20.9, 100, 'In Stock', 'S004', 'W001'),
+(6, 'DC Super Absorbent Doggy Pads', 'DC', 'Dog', 'Hygiene', '50 pcs per pack. Dimension: 60cm x 45cm', 49, 200, 'In Stock', 'S005', 'W001'),
+(7, 'Trixie Denta Fun Ball 6cm Dog Toy', 'Trixie', 'Dog', 'Toys', 'The product is made of natural rubber. Its diameter is 6cm', 33.8, 50, 'In Stock', 'S006', 'W001'),
+(8, 'Trustie Carrier', 'Trustie', 'Dog', 'Cage', 'A carrier for cats and small dogs. Size:\r\n54 x 33.5 x 30 cm', 130, 40, 'In Stock', 'S008', 'W001'),
+(9, 'Himalaya Immunol Tablets for Immunity ', 'Himalaya', 'Dog', 'Vitamins', '60 tabs per bottle. The product is suitable for cats and dogs.', 30, 40, 'In Stock', 'S007', 'W001'),
+(10, 'Trixie Cat Activity Brain Mover Strategy Game', 'Trixie', 'Cat', 'Toys', 'The product is made of plastic and it has 4 different modules that present different tasks, including a board game with 2 ball-shaped covers and various small hollows and drawers. It is non-slip due to rubber feet. Size:25x20cm', 154.9, 30, 'In Stock', 'S006', 'W001'),
+(11, 'Himalaya Digyton Digestive Drops', 'Himalaya', 'Cat', 'Vitamins', '30ml per bottel. Digyton is a herbomineral formulation that works to stimulate the appetite and reduce attacks of common gastrointestinal complaints. These include diarrhoea, colic distention, flatulence, constipation, cramps, and other GI upsets.', 16, 100, 'In Stock', 'S007', 'W001'),
+(12, 'Trustie Carrier (Assorted)', 'Trustie', 'Cat', 'Cage', 'Size:48.5 X W 32 X H 30 cm', 89.6, 30, 'In Stock', 'S008', 'W001'),
+(13, 'Doggy Mystery Box', 'Aixia', 'Dog', 'Packages', 'There are different types of products including food, toys, cage and so on in the mystery box. The value of the box is over RM350.', 289, 30, 'In Stock', 'S003', 'W001'),
+(14, 'Kittie Mystery Box', 'Acana', 'Cat', 'Packages', 'There are different types of products including food, toys, cage and so on in the mystery box. The value of the box is over RM400.', 350, 30, 'In Stock', 'S001', 'W001');
 
 -- --------------------------------------------------------
 
