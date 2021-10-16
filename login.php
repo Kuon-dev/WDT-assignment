@@ -15,7 +15,10 @@
         $_SESSION['SignIn_password']=$data['Password'];
 
         //iii.gerak ke menu utama
-        echo"<script>window.location.href='index.php';</script>";
+        session_start();
+        $_SESSION["user_email"] = $data['Email'];
+        header("location: index.php");
+        exit();
     }
     else
     {

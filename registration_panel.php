@@ -300,7 +300,7 @@
         </div>
     </div>
 
-    <!-- import javascript file -->
+    <!-- JS file -->
     <script>
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');

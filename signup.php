@@ -7,8 +7,9 @@
     die('Error: ' . mysqli_error($con));
     }
     else {
+    session_start();
     echo '<script>
-    window.location.href = "Loading_screen.html";
+    window.location.href = "common/Loading_screen.html";
     </script>';
     }
     mysqli_close($con);
