@@ -1,3 +1,21 @@
+<?php include("../conn.php"); ?>
+<?php
+// ref = https://www.w3schools.com/php/php_mysql_select.asp
+ob_start();
+session_start();
+if (!isset($_SESSION['SignIn_email'])) {
+  $user_data = "";
+
+}
+else {
+  $sql = "SELECT id, firstname, lastname FROM MyGuests";
+  $result = mysqli_query($conn, $sql);
+  $user_data = mysqli_fetch_assoc($result);
+  return $user_data;
+}
+  $con->close()
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,10 +37,32 @@
           </div>
           <div>
             <nav class="nav-top">
-              <a href="contact-us.php" class="nav-top-text">Contact Us</a> |
-              <a href="termscondition.php" class="nav-top-text">T&C</a> |
-              <a href="about-us.php" class="nav-top-text">About Us</a> |
-              <a href="registration_panel.php" class="nav-top-text">Sign up</a> |
+              <ul>
+              <li><a href="contact-us.php" class="nav-top-text">Contact Us</a> |</li>
+              <li><a href="termscondition.php" class="nav-top-text">T&C</a> |</li>
+              <li><a href="about-us.php" class="nav-top-text">About Us</a> |</li>
+              
+              <?php
+
+              if (isset($_SESSION["user_email"])) {
+                echo "
+                <li><a href='registration_panel.php' class='nav-top-text'>Profile</a> |
+                <ul>
+                <li><a href='#'>My account</a></li>
+                <li><a href='#'>Cart</a></li>
+                <li><a href='#'>Purchase History</a></li>
+                <li><a href='#'>Order Status</a></li>
+                <li><a href='logout.php'>Logout</a></li>
+                </ul>
+                </li>
+                ";
+              }
+              else {
+                echo "<li><a href='registration_panel.php' class='nav-top-text'>Sign In</a> |</li>";
+              }
+      
+              ?>
+              </ul>
             </nav>
           </div>
         </div>

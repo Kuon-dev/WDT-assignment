@@ -23,7 +23,7 @@
     <script src="js/functions.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <div class="container">
+    <div class="container zindex-fixed">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-muted">&copy; 2021 Paws Heaven, all rights reserved</p>
 
@@ -32,9 +32,9 @@
         </a>
 
         <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted font-sora">Home</a></li>
-        <li class="nav-item"><a href="privacy-policy.php" class="nav-link px-2 text-muted font-sora">Privacy Policy</a></li>
-        <li class="nav-item"><a href="faq.php" class="nav-link px-2 text-muted font-sora">FAQs</a></li>
+        <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted sora">Home</a></li>
+        <li class="nav-item"><a href="privacy-policy.php" class="nav-link px-2 text-muted sora">Privacy Policy</a></li>
+        <li class="nav-item"><a href="faq.php" class="nav-link px-2 text-muted sora">FAQs</a></li>
         </ul>
     </footer>
     </div>
