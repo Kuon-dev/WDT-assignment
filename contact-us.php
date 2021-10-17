@@ -56,16 +56,27 @@
                 float: center;
                 margin-left: -50px;
             }
+
+            .background {
+            width: 100%;
+            height: 880px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/login-background.png);
+            background-size: cover;
+            background-position: center center;
+            background-color: black;
+            position: absolute;
+        }
         </style>
     </head>
     <body>
+    <div class="background"></div>
     <div id="header"></div>
     <div class="content-area">
       <div>
         <div>
-            <img src="image/transparent 1.png" width=300px style="margin-left:-40px; margin-top:-40px">
-          <p class="font-sora fs-2 fw-bold">Contact Us</p>
-          <p class="font-sora">Email: paws_heaven@gmail.com<br>
+            <img src="image/transparent 1.png" width=300px style="margin-left:-40px; margin-top:-40px; filter: brightness(180%);">
+          <p class="sora fs-2 fw-bold text-white">Contact Us</p>
+          <p class="sora fs-4 text-white">Email: paws_heaven@gmail.com<br>
             Contact Number: 0192881777</p>
                 <form action="#" method="POST">
                 <div class="section">
@@ -95,7 +106,7 @@
       </div>
     </div>
     </body>
-    <div id="footer"></div>
+    <div id="footer" style="position: relative; margin-top: 20px;"></div>
 </html>
 
 <?php
