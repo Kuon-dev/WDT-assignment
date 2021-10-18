@@ -1,185 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Paws Heaven</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        <script>
-            $(function(){ 
-                $("#header").load("common/header.php");
-                $("#footer").load("common/footer.php");
-            });
-        
-        </script>
-        <style>
-        .banner-area {
-            width: 100%;
-            height: 450px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(image/about-us.jpg);
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center center;
-            padding-bottom: 10px;
-            margin-top: 110px;
-            background-color: black;
-        }
-        .banner-area h2 {
-            padding-top: 8%;
-            font-size: 70px;
-            filter: brightness(2000%);
-            color: white;
-        }
-        </style>
+<head>
+    <!-- Page Title -->
+    <title>Paws Heaven</title>
 
-    </head>
-    <body>
-    <div id="header"></div>
-    <div class="banner-area">
-        <h2 class="poppins fw-bolder">Welcome to PawsHeaven</h2>
-        <h3 class="poppins fs-2 fw-bolder text-white" stlye="color: white;">Largest Online Pet Store in Malaysia</h3>
-    </div>
-    <div class="a-divider"></div>
-    <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
-          <div>
-            <h2 class="sora center fs-1 fw-bolder">Popular Products</h2>
-            <br>
-            <hr>
-            <table class="productContainer">
-            <!-- 1st Row -->
-                <tr>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img  class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img  class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img  class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img  class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <!-- 2nd Row -->
-                <tr>
-                    <td class="productName">
-                        Product 1
-                    </td>
-                    <td class="productName">
-                        Product 2
-                    </td>
-                    <td class="productName">
-                        Product 3
-                    </td>
-                    <td class="productName">
-                        Product 4
-                    </td>
-                </tr>
-                <!-- 3rd Row -->
-                <tr>
-                    <td class="productPrice">
-                        (RM10.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM20.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM30.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM40.00)
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <hr>
-            <table class="productContainer">
-                <!-- 5th Row -->
-                <tr>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgContainer">
-                            <a href="https://playvalorant.com/en-us/">
-                                <img class="IMG" src="image/whiskas-adult-ocean-fish.jpg">
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <!-- 6th Row -->
-                <tr>
-                    <td class="productName">
-                        Product 5
-                    </td>
-                    <td class="productName">
-                        Product 6
-                    </td>
-                    <td class="productName">
-                        Product 7
-                    </td>
-                    <td class="productName">
-                        Product 8
-                    </td>
-                </tr>
-                <!-- 7th Row -->
-                <tr>
-                    <td class="productPrice">
-                        (RM50.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM60.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM70.00)
-                    </td>
-                    <td class="productPrice">
-                        (RM80.00)
-                    </td>
-                </tr>
-            </table>
+    <!-- Common Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Import CSS stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Header & Footer Loader -->
+    <script>
+        $(function(){ 
+            $("#header").load("common/header.php");
+            $("#footer").load("common/footer.php");
+        });
+    
+        function redicrect() {
+            window.location.href = "https://playvalorant.com/en-us/";
+        }
+    </script>
+
+    <!-- Styling -->
+    <style>
+    .banner-area {
+        width: 100%;
+        height: 450px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(image/about-us.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        padding-bottom: 10px;
+        margin-top: 110px;
+        background-color: black;
+    }
+
+    .banner-area h2 {
+        padding-top: 8%;
+        font-size: 70px;
+        filter: brightness(2000%);
+        color: white;
+    }
+
+    .parentbox {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .childbox {
+        flex: 0 0 300px;
+        margin: 25px;
+        height: 450px;
+        background-color: white;
+        border-radius: 10px;
+        border: #d4d4d4 solid 2px;
+        padding: 10px;
+    }
+
+    .childbox hr {
+        margin: 5px;
+    }
+
+    .childbox:hover {
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .productName {
+        height: 55px;
+    }
+
+    .productName:hover {
+        font: black; 
+    }
+
+    .productPrice {
+        height: 30px;
+        margin-top: 20px;
+    }
+
+    .addtocartBTN {
+        border: 1px solid black;
+        background-color: white;
+        width: 150px;
+        height: 40px;
+        text-align: center;
         
+    }
+
+    .addtocartBTN:hover {
+        cursor: pointer;
+        background-color: grey;
+        transition: background-color 0.5s ease-in; 
+    }
+    </style>
+
+</head>
+<body>
+<!-- Header -->
+<div id="header"></div>
+<div class="banner-area">
+    <h2 class="poppins fw-bolder">Welcome to PawsHeaven</h2>
+    <h3 class="poppins fs-2 fw-bolder text-white" stlye="color: white;">Largest Online Pet Store in Malaysia</h3>
+</div>
+<div class="a-divider"></div>
+<div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
+        <div>
+        <h2 class="sora center fs-1 fw-bolder">Popular Products</h2>
+        <br>
+        <hr>
         </div>
+        <div class="parentbox">
+        <?php 
+            //connect database
+            include ("conn.php"); 
+            //get data from database
+            $result=mysqli_query($con,"SELECT * FROM product ORDER BY Product_Name"); 
+            //connect different data with different image
+            while($row=mysqli_fetch_array($result)){
+                
+                if ($row['Type of Animal']=="Cat"){
+                    $product_img = "whiskas-adult-ocean-fish.jpg";
+                }
+                else if ($row['Type of Animal']=="Dog") {
+                    $product_img = "dog.png";
+                }
+                
+                //arrange product details that want to be display
+                $data = '<div class="childbox" onclick="redirect()">
+                <img src="image/'.$product_img.'" width= "200px" height="240px style="float: center"> 
+                
+                <hr>
+
+                <div class="productName">
+                    <a href="#">
+                    <h5>'.$row['Product_Name'].'</h5></a>
+                </div>
+
+                <div class="productPrice">
+                    RM '.$row['Price'].'<br>
+                </div>
+
+                <a href="#">
+                    <button class="addtocartBTN">Add To Cart</button>
+                </a>
+                </div>
+                
+                ';
+                //display data
+                echo $data;
+                
+                } 
+                mysqli_close($con);//to close the database connection
+        ?>
         </div>
-    </div>
-    </body>
+
+</div>
+
+</body>
+
+    <!-- Footer -->
     <div id="footer"></div>
 </html>
