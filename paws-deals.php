@@ -94,7 +94,6 @@
 <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <div>
         <h2 class="sora center fs-1 fw-bolder">Paws Deals</h2>
-        <br>
         <hr>
         </div>
         <div class="parentbox">

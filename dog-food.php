@@ -93,7 +93,7 @@
 <div class="a-divider"></div>
 <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <div>
-        <h2 class="sora center fs-1 fw-bolder">Packages</h2>
+        <h2 class="sora center fs-1 fw-bolder">Dog Food</h2>
         <hr>
         </div>
         <div class="parentbox">
@@ -102,14 +102,11 @@
             $result=mysqli_query($con,"SELECT * FROM product ORDER BY Product_Name");
             while($row=mysqli_fetch_array($result)){
                 
-                if ($row['Type of Animal']=="Cat"){
-                    $product_img = "whiskas-adult-ocean-fish.jpg";
-                }
-                else if ($row['Type of Animal']=="Dog") {
+                if ($row['Type of Animal']=="Dog") {
                     $product_img = "dog.png";
                 }
                 
-                if ($row['Category']=="Packages"){
+                if ($row['Category']=="Food" && $row['Type of Animal']=="Dog"){
                 $data = '<div class="childbox" onclick="redirect()">
                 <img src="image/'.$product_img.'" width= "200px" height="240px style="float: center">
                 
