@@ -40,7 +40,9 @@
     <table class="product">
         <tr>
             <td class="productNav" colspan="4">
-                <button id="returnBtn"> < Back </button>
+                <a href="index.php">
+                    <button id="returnBtn"> < Back </button>
+                </a>
             </td>
         </tr>
         <tr>
@@ -140,11 +142,6 @@
 
     let backBTN = document.querySelector("returnBtn");
 
-
-    // Back button redirect
-    backBTN.addEventListener('click', () => {
-        location.href = "index.php"
-    });
 </script>
 
 
