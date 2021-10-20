@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 16, 2021 at 08:28 AM
+-- Generation Time: Oct 20, 2021 at 07:01 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
   `Order_ID` varchar(20) NOT NULL,
-  `Member_ID` varchar(20) NOT NULL,
+  `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Review` text NOT NULL,
-  PRIMARY KEY (`Order_ID`,`Member_ID`,`Product_ID`)
+  PRIMARY KEY (`Order_ID`,`Email`,`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `message` (
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE IF NOT EXISTS `order` (
   `Order_ID` varchar(20) NOT NULL,
-  `Member_ID` varchar(20) NOT NULL,
+  `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
@@ -142,11 +142,11 @@ INSERT INTO `product` (`Product_ID`, `Product_Name`, `Brand`, `Type of Animal`, 
 
 DROP TABLE IF EXISTS `shopping_cart`;
 CREATE TABLE IF NOT EXISTS `shopping_cart` (
-  `Member_ID` varchar(20) NOT NULL,
+  `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
-  PRIMARY KEY (`Member_ID`,`Product_ID`)
+  PRIMARY KEY (`Email`,`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
