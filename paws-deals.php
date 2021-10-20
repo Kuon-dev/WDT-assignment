@@ -29,25 +29,6 @@
 
     <!-- Styling -->
     <style>
-    .banner-area {
-        width: 100%;
-        height: 450px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(image/about-us.jpg);
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center center;
-        padding-bottom: 10px;
-        margin-top: 110px;
-        background-color: black;
-    }
-
-    .banner-area h2 {
-        padding-top: 8%;
-        font-size: 70px;
-        filter: brightness(2000%);
-        color: white;
-    }
-
     .parentbox {
         display: flex;
         flex-wrap: wrap;
