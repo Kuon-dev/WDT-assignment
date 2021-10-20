@@ -92,7 +92,7 @@ else {
                 </li>
               </li>
               <li><a href="#" class="nav-bot-text">Packages</a>|</li>
-              <li><a href="#" class="nav-bot-text">Paws Deals</a>|</li>
+              <li><a href="paws-deals.php" class="nav-bot-text">Paws Deals</a>|</li>
               <li><a href="pet-advice.php" class="nav-bot-text">Paws Advice</a>|</li>
             </ul>
           </nav>
