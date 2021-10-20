@@ -24,6 +24,7 @@
             $("#header").load("common/header.php");
             $("#footer").load("common/footer.php");
         });
+
     </script>
 
 </head>
@@ -35,6 +36,7 @@
 <!-- Main Content Area -->
 <div class="content-area">
 
+    <!-- Product Description Area -->
     <table class="product">
         <tr>
             <td class="productNav" colspan="4">
@@ -70,12 +72,12 @@
                     <b>+</b>
                 </button>
             </td>
-            <td id="productQuantity">
-                <b>2</b>
+            <td id="productQuantityContainer">
+                <input id="productQuantity" type="number" value="0" min="0">
             </td>
             <td class="quantityBTN">
                 <button id="minusBTN">
-                    <b>-</b>
+                    <b>−</b>
                 </button>
             </td>
         </tr>
@@ -116,6 +118,36 @@
     </table>
 
 </div>
+<!-- //Product Description Area -->
+
+<!-- Javascript -->
+<script>
+    // Quatity add/minus
+    let plusQuantity = document.querySelector("#plusBTN");
+    let minusQuantity = document.querySelector("#minusBTN");
+    let Quantity = document.querySelector("#productQuantity");
+
+    plusQuantity.addEventListener('click', () => {
+        Quantity.value = parseInt(Quantity.value) + 1;
+    });
+
+    minusQuantity.addEventListener('click', () => {
+        if (Quantity.value == 0) {
+            return;
+        }
+        Quantity.value = parseInt(Quantity.value) - 1;
+    });
+
+    let backBTN = document.querySelector("returnBtn");
+
+
+    // Back button redirect
+    backBTN.addEventListener('click', () => {
+        location.href = "index.php"
+    });
+</script>
+
+
 </body>
 
 <!-- Footer -->
