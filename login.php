@@ -25,7 +25,7 @@
         //i.gerak ke previous page
         echo"<script>
             alert('Failed to login.');
-            window.history.back();
+            window.location.href='registration_panel.php';
             </script>";
     }
 ?>
