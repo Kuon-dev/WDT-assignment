@@ -1,19 +1,17 @@
 <?php include("../conn.php"); ?>
 <?php
 // ref = https://www.w3schools.com/php/php_mysql_select.asp
+// ref 2 = https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing
 ob_start();
 session_start();
-if (!isset($_SESSION['SignIn_email'])) {
+if (!isset($_SESSION["user_email"])) {
   $user_data = "";
 
 }
 else {
-  $sql = "SELECT id, firstname, lastname FROM MyGuests";
-  $result = mysqli_query($conn, $sql);
-  $user_data = mysqli_fetch_assoc($result);
-  return $user_data;
+  $user_result = mysqli_query($con, "SELECT Email, Member_Name, Contact_Number FROM member");
+  $user_data = mysqli_fetch_assoc($user_result);
 }
-  $con->close()
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +44,9 @@ else {
 
               if (isset($_SESSION["user_email"])) {
                 echo "
-                <li><a href='registration_panel.php' class='nav-top-text'>Profile</a> |
+                <li><a href='#' class='nav-top-text'>Profile</a> |
                 <ul>
-                <li><a href='#'>My account</a></li>
+                <li><a href='my-account.php'>My account</a></li>
                 <li><a href='#'>Cart</a></li>
                 <li><a href='#'>Purchase History</a></li>
                 <li><a href='#'>Order Status</a></li>
@@ -77,7 +75,7 @@ else {
                 <li><a href="dog-food.php">Food</a></li>
                 <li><a href="dog-toys.php">Toys</a></li>
                 <li><a href="dog-hygiene.php">Hygiene</a></li>
-                <li><a href="dog-vitamins.php">Vitamins</a></li>
+                <li><a href="dog-vitamin.php">Vitamins</a></li>
                 <li><a href="dog-cage.php">Cage & Others</a></li>
               </ul>
               </li>
