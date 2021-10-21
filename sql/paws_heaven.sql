@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 21, 2021 at 08:38 AM
+-- Generation Time: Oct 21, 2021 at 01:37 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -33,7 +33,9 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Review` text NOT NULL,
-  PRIMARY KEY (`Order_ID`,`Email`,`Product_ID`)
+  PRIMARY KEY (`Order_ID`,`Email`,`Product_ID`),
+  KEY `Email` (`Email`),
+  KEY `Product_ID` (`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -77,11 +79,11 @@ CREATE TABLE IF NOT EXISTS `message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE IF NOT EXISTS `order` (
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
   `Order_ID` varchar(20) NOT NULL,
   `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
@@ -89,7 +91,9 @@ CREATE TABLE IF NOT EXISTS `order` (
   `Price` float NOT NULL,
   `Purchase_Date` date NOT NULL,
   `Order_Status` text NOT NULL,
-  PRIMARY KEY (`Order_ID`)
+  PRIMARY KEY (`Order_ID`),
+  KEY `Email` (`Email`),
+  KEY `Product_ID` (`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -112,7 +116,9 @@ CREATE TABLE IF NOT EXISTS `product` (
   `Supplier_ID` varchar(20) NOT NULL,
   `Staff_ID` varchar(20) NOT NULL,
   `Product_Image` longblob NOT NULL,
-  PRIMARY KEY (`Product_ID`)
+  PRIMARY KEY (`Product_ID`),
+  KEY `Supplier_ID` (`Supplier_ID`),
+  KEY `Staff_ID` (`Staff_ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
@@ -160,7 +166,8 @@ CREATE TABLE IF NOT EXISTS `shopping_cart` (
   `Product_ID` varchar(20) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
-  PRIMARY KEY (`Email`,`Product_ID`)
+  PRIMARY KEY (`Email`,`Product_ID`),
+  KEY `Product_ID` (`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
