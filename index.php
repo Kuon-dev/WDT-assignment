@@ -120,20 +120,10 @@
             //connect database
             include ("conn.php"); 
             //get data from database
-            $result=mysqli_query($con,"SELECT * FROM product ORDER BY Product_Name"); 
-            //connect different data with different image
-            while($row=mysqli_fetch_array($result)){
-                
-                if ($row['Type of Animal']=="Cat"){
-                    $product_img = "whiskas-adult-ocean-fish.jpg";
-                }
-                else if ($row['Type of Animal']=="Dog") {
-                    $product_img = "dog.png";
-                }
-                
-                //arrange product details that want to be display
-                $data = '<div class="childbox" onclick="redirect()">
-                <img src="image/'.$product_img.'" width= "200px" height="240px style="float: center"> 
+            $mysql_run=mysqli_query($con, "SELECT * FROM product;");
+            while ($row=mysqli_fetch_assoc($mysql_run)) {
+                $data ='<div class="childbox" onclick="redirect()">
+                <img src="data:image/jpg;base64,'.base64_encode($row['Product_Image']).'" width="200px" height="240px"/>
                 
                 <hr>
 
