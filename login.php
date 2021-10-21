@@ -16,7 +16,14 @@
 
         //iii.gerak ke menu utama
         session_start();
-        $_SESSION["user_email"] = $data['Email'];
+        $user_data_result = mysqli_query($con, "select * FROM member");
+        $user_data = mysqli_fetch_array($user_data_result);
+        $_SESSION["user_email"] = $user_data['Email'];
+        $_SESSION["user_name"] = $user_data['Member_Name'];
+        $_SESSION["user_pw"] = $user_data['Password'];
+        $_SESSION["user_phnum"] = $user_data['Contact_Number'];
+        $_SESSION["user_add"] = $user_data['Address'];
+
         header("location: index.php");
         exit();
     }

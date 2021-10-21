@@ -1,19 +1,17 @@
 <?php include("../conn.php"); ?>
 <?php
 // ref = https://www.w3schools.com/php/php_mysql_select.asp
+// ref 2 = https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing
 ob_start();
 session_start();
-if (!isset($_SESSION['SignIn_email'])) {
+if (!isset($_SESSION["user_email"])) {
   $user_data = "";
 
 }
 else {
-  $sql = "SELECT id, firstname, lastname FROM MyGuests";
-  $result = mysqli_query($conn, $sql);
-  $user_data = mysqli_fetch_assoc($result);
-  return $user_data;
+  $user_result = mysqli_query($con, "SELECT Email, Member_Name, Contact_Number FROM member");
+  $user_data = mysqli_fetch_assoc($user_result);
 }
-  $con->close()
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +44,9 @@ else {
 
               if (isset($_SESSION["user_email"])) {
                 echo "
-                <li><a href='registration_panel.php' class='nav-top-text'>Profile</a> |
+                <li><a href='#' class='nav-top-text'>Profile</a> |
                 <ul>
-                <li><a href='#'>My account</a></li>
+                <li><a href='my-account.php'>My account</a></li>
                 <li><a href='#'>Cart</a></li>
                 <li><a href='#'>Purchase History</a></li>
                 <li><a href='#'>Order Status</a></li>
@@ -72,27 +70,27 @@ else {
         <div class="navigation">
           <nav class="nav-bot" style="margin-top: -2px;">
             <ul>
-              <li>| <a href="dog.php" class="nav-bot-text">Dogs ▾</a>|
+              <li>| <a href="#" class="nav-bot-text">Dogs ▾</a>|
               <ul>
-                <li><a href="dog-food.php">Food</a></li>
-                <li><a href="dog-toys.php">Toys</a></li>
-                <li><a href="dog-hygiene.php">Hygiene</a></li>
-                <li><a href="dog-vitamins.php">Vitamins</a></li>
-                <li><a href="dog-cage.php">Cage & Others</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Hygiene</a></li>
+                <li><a href="#">Vitamins</a></li>
+                <li><a href="#">Cage & Others</a></li>
               </ul>
               </li>
-              <li><a href="cat.php" class="nav-bot-text">Cats ▾</a>|
+              <li><a href="#" class="nav-bot-text">Cats ▾</a>|
                 <ul>
-                  <li><a href="cat-food.php">Food</a></li>
-                  <li><a href="cat-toys.php">Toys</a></li>
-                  <li><a href="cat-hygiene.php">Hygiene</a></li>
-                  <li><a href="cat-vitamins.php">Vitamins</a></li>
-                  <li><a href="cat-cage.php">Cage & Others</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Toys</a></li>
+                  <li><a href="#">Hygiene</a></li>
+                  <li><a href="#">Vitamins</a></li>
+                  <li><a href="#">Cage & Others</a></li>
                 </ul>
                 </li>
               </li>
-              <li><a href="packages.php" class="nav-bot-text">Packages</a>|</li>
-              <li><a href="paws-deals.php" class="nav-bot-text">Paws Deals</a>|</li>
+              <li><a href="#" class="nav-bot-text">Packages</a>|</li>
+              <li><a href="#" class="nav-bot-text">Paws Deals</a>|</li>
               <li><a href="pet-advice.php" class="nav-bot-text">Paws Advice</a>|</li>
             </ul>
           </nav>
