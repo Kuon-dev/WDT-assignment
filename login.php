@@ -11,12 +11,11 @@
         $data=mysqli_fetch_array($sql);
 
         //ii.Umpukkan kepada nilai session
-        $_SESSION['SignIn_email']=$data['Email'];
-        $_SESSION['SignIn_password']=$data['Password'];
+        $user=$data['Email'];
 
         //iii.gerak ke menu utama
         session_start();
-        $user_data_result = mysqli_query($con, "select * FROM member");
+        $user_data_result = mysqli_query($con, "SELECT * FROM member WHERE Email='$user' limit 1");
         $user_data = mysqli_fetch_array($user_data_result);
         $_SESSION["user_email"] = $user_data['Email'];
         $_SESSION["user_name"] = $user_data['Member_Name'];
