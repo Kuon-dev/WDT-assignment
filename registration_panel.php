@@ -44,7 +44,27 @@
             height: 90vh;
             margin: 20px 0 20px;
         }
+	
+	#return {
+            position: absolute;
+            top: 5%;
+            left: 1%;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+            color: #dfa6c7;
+        }
 
+        #returnBtn {
+            position: absolute;
+            top: 5%;
+            left: 1%;
+            cursor: pointer;
+            border: none;
+            background-color: #dfa6c7;
+            color: white;
+        }
+	    
         .container h1 {
             font-weight: bold;
             margin: 0 0 0 50;
@@ -263,6 +283,9 @@
 
         <!-- Sign In Form -->
         <div class="register-form sign-in-area">
+	    <a href="index.php">
+                <button id="return"> < Back </button>
+            </a>
             <form action="login.php" method="POST">
                 <h1>Sign in</h1>
                 <!-- Request Email -->
@@ -282,6 +305,9 @@
 
                 <!-- Overlay Left Panel -->
                 <div class="overlay-panel overlay-left">
+		    <a href="index.php">
+                        <button id="returnBtn"> < Back </button>
+                    </a>
                     <h1>Welcome Back!</h1>
                     <p>Login now and keep your fur buddy happy : )</p>
                     <!-- Overlay Transition Button -->
