@@ -3,5 +3,9 @@
 session_start();
 session_unset();
 session_destroy();
+
+echo"<script>
+        alert('Logout successfully.');
+    </script>";
 header("location: index.php");
 exit();
