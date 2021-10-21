@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 21, 2021 at 01:37 PM
+-- Generation Time: Oct 21, 2021 at 02:11 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -29,13 +29,15 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
-  `Order_ID` varchar(20) NOT NULL,
+  `Review_ID` int(20) NOT NULL AUTO_INCREMENT,
+  `Order_ID` int(20) NOT NULL,
   `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Review` text NOT NULL,
-  PRIMARY KEY (`Order_ID`,`Email`,`Product_ID`),
+  PRIMARY KEY (`Review_ID`),
   KEY `Email` (`Email`),
-  KEY `Product_ID` (`Product_ID`)
+  KEY `Product_ID` (`Product_ID`),
+  KEY `Order_ID` (`Order_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -84,13 +86,13 @@ CREATE TABLE IF NOT EXISTS `message` (
 
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
-  `Order_ID` varchar(20) NOT NULL,
+  `Order_ID` int(20) NOT NULL AUTO_INCREMENT,
   `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
   `Purchase_Date` date NOT NULL,
-  `Order_Status` text NOT NULL,
+  `Tracking Number` varchar(50) NOT NULL,
   PRIMARY KEY (`Order_ID`),
   KEY `Email` (`Email`),
   KEY `Product_ID` (`Product_ID`)
@@ -162,12 +164,14 @@ INSERT INTO `product` (`Product_ID`, `Product_Name`, `Brand`, `Type of Animal`, 
 
 DROP TABLE IF EXISTS `shopping_cart`;
 CREATE TABLE IF NOT EXISTS `shopping_cart` (
+  `Cart_ID` int(20) NOT NULL AUTO_INCREMENT,
   `Email` varchar(20) NOT NULL,
   `Product_ID` varchar(20) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
-  PRIMARY KEY (`Email`,`Product_ID`),
-  KEY `Product_ID` (`Product_ID`)
+  PRIMARY KEY (`Cart_ID`,`Email`,`Product_ID`),
+  KEY `Product_ID` (`Product_ID`),
+  KEY `Email` (`Email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
