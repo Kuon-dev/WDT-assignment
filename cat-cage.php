@@ -98,37 +98,34 @@
         </div>
         <div class="parentbox">
         <?php 
+            //connect database
             include ("conn.php");
-            $result=mysqli_query($con,"SELECT * FROM product ORDER BY Product_Name");
-            while($row=mysqli_fetch_array($result)){
-                
-                if ($row['Type of Animal']=="Cat") {
-                    $product_img = "whiskas-adult-ocean-fish.jpg";
-                }
-                
+            //get data from database
+            $mysql_run=mysqli_query($con, "SELECT * FROM product;");
+            while ($row=mysqli_fetch_assoc($mysql_run)) {
                 if ($row['Category']=="Cage" && $row['Type of Animal']=="Cat"){
-                $data = '<div class="childbox" onclick="redirect()">
-                <img src="image/'.$product_img.'" width= "200px" height="240px style="float: center">
-                
-                <hr>
+                    $data ='<div class="childbox" onclick="redirect()">
+                    <img src="data:image/jpg;base64,'.base64_encode($row['Product_Image']).'" width="200px" height="240px"/>
+                    
+                    <hr>
 
-                <div class="productName">
+                    <div class="productName">
+                        <a href="#">
+                        <h5>'.$row['Product_Name'].'</h5></a>
+                    </div>
+
+                    <div class="productPrice">
+                        RM '.$row['Price'].'<br>
+                    </div>
+
                     <a href="#">
-                    <h5>'.$row['Product_Name'].'</h5></a>
-                </div>
-
-                <div class="productPrice">
-                    RM '.$row['Price'].'<br>
-                </div>
-
-                <a href="#">
-                    <button class="addtocartBTN">Add To Cart</button>
-                </a>
-                </div>
-                
-                ';
-                
-                echo $data;
+                        <button class="addtocartBTN">Add To Cart</button>
+                    </a>
+                    </div>
+                    
+                    ';
+                    //display data
+                    echo $data;
                 
                 } 
             }
