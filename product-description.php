@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>  
-    <!-- Quantity +1-1 -->
-    <!-- border close -->
+<head>
     <!-- Page Title -->
     <title>Paws Heaven Product Description trial</title>
 

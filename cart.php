@@ -58,7 +58,7 @@
                 </div>
                 <!-- product price -->
                 <div class="productPrice">
-                    <h4>RM '.$row['Price'].'</h4>
+                    <h5>RM </h5><h4>'.$row['Price'].'</h4>
                     <br>
                 </div>
 
@@ -108,9 +108,11 @@
         </div>
     </div>
     <!-- checkout button -->
-    <button id="checkoutBTN">
-        Check Out
-    </button>
+    <a href="#">
+        <button id="checkoutBTN">
+            Check Out
+        </button>
+    </a>
 </div>
 
 <!-- javascrip -->
@@ -131,6 +133,10 @@
         Quantity.value = parseInt(Quantity.value) - 1;
     });
 
+    document.querySelectorAll('.productPrice > h4').forEach(x => console.log(x.innerHTML))
+
+    totalPrice = document.querySelector('#totalPrice > h3').innerHTML
+    console.log(totalPrice) //= (document.querySelector('#productQuantity.value') * document.querySelectorAll('.productPrice > h4'))
 </script>
 
 </body>
