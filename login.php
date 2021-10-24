@@ -1,13 +1,14 @@
 <?PHP 
+    //connect to database
     include('conn.php');
     $SignIn_email=$_POST["SignIn_email"];
     $SignIn_password=$_POST["SignIn_password"];
     $sql=mysqli_query($con,"select Email, Password FROM member WHERE Email='$SignIn_email' AND Password='$SignIn_password' limit 1");
 
-    //L6:semakan jika data yang dicari wujud
+    //Check is the data available in database
     if(mysqli_num_rows($sql)==1)
     {
-        //i.Mengambil data dari jadual
+        //retrieve data from database
         $data=mysqli_fetch_array($sql);
 
         //ii.Umpukkan kepada nilai session
