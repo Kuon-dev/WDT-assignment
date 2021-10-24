@@ -122,13 +122,14 @@
             //get data from database
             $mysql_run=mysqli_query($con, "SELECT * FROM product;");
             while ($row=mysqli_fetch_assoc($mysql_run)) {
+                $Product_ID=$row['Product_ID'];
                 $data ='<div class="childbox" onclick="redirect()">
                 <img src="data:image/jpg;base64,'.base64_encode($row['Product_Image']).'" width="200px" height="240px"/>
                 
                 <hr>
 
                 <div class="productName">
-                    <a href="#">
+                    <a href="product-description.php?p=$Product_ID">
                     <h5>'.$row['Product_Name'].'</h5></a>
                 </div>
 
