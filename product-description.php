@@ -202,8 +202,9 @@
         <?php 
             //connect database
             include ("conn.php");
-            $product_id=$_GET['p'];
+            $product_id=$_GET['Product_ID'];
             //get data from database
+            $sql = "SELECT * FROM product WHERE Product_ID=$product_id";
             $sql = "SELECT * FROM product, supplier, feedback, member WHERE Product_ID=$product_id, product.Supplier_Id=supplier.Supplier_Id, product.Product_ID=feedback.Product_ID, feedback.Email=member.Email ";
             if (!$con) {
                 die("Connection failed: " . mysqli_connect_error());
@@ -256,7 +257,7 @@
                 </div>
                 <!-- add to cart button -->
                 <div class="addtocartContainer">
-                    <a href="#">
+                    <a href="cart.php">
                         <button id="addtocartBTN">
                             ADD TO CART
                         </button>
