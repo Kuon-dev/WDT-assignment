@@ -21,6 +21,7 @@
             $("#header").load("common/header.php");
             $("#footer").load("common/footer.php");
         });
+
     </script>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
@@ -190,6 +191,7 @@
 <!-- Main Content Area -->
 <div class="content-area">
 
+
     <!-- Card -->
     <div class="productContainer">
         <!-- Navigational Bar -->
@@ -305,6 +307,96 @@
 <!-- Javascript -->
 <script>
 
+
+    <!-- Product Description Area -->
+    <table class="product">
+        <tr>
+            <td class="productNav" colspan="4">
+                <a href="index.php">
+                    <button id="returnBtn"> < Back </button>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td id="productImage" rowspan="6">
+                <img src="image/whiskas-adult-ocean-fish.jpg" alt="Product Image">
+            </td>
+            <td id="productName" colspan="3">
+                <b><p>Woof Food</p></b>
+            </td>
+        </tr>
+        <tr>
+            <td id="productManufacturer" colspan="3">
+                <p>Woof Food SDN. BHD</p>
+            </td>
+        </tr>
+        <tr>
+            <td id="productPrice" colspan="3">
+                <b><p>RM 10 . 00</p></b> / unit
+            </td>
+        </tr>
+        <tr>
+            <td id="productDescription" colspan="3">
+                <p>Meow Food is very good good for your meow.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="quantityBTN">
+                <button id="plusBTN">
+                    <b>+</b>
+                </button>
+            </td>
+            <td id="productQuantityContainer">
+                <input id="productQuantity" type="number" value="0" min="0">
+            </td>
+            <td class="quantityBTN">
+                <button id="minusBTN">
+                    <b>−</b>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td id="addtocartContainer" colspan="3">
+                <button id="addtocartBTN">
+                    <b>ADD TO CART</b>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td id="reviewTitle" colspan="4">
+                <h2>Our Customer's Review</h2>
+            </td>
+        </tr>
+        <tr>
+            <td class="reviewName firstName" colspan="4">
+                First Name
+            </td>
+        </tr>
+        <tr>
+            <td class="reviewContainer firstReview" colspan="4">
+                Meow is Happy
+            </td>
+        </tr>
+        <tr class="spacing"></tr>
+        <tr>
+            <td class="reviewName secondName" colspan="4">
+                2nd Name
+            </td>
+        </tr>
+        <tr>
+            <td class="reviewContainer secondReview" colspan="4">
+                Meow is very very very very very very very Happy
+            </td>
+        </tr>
+        <tr class="spacing"></tr>
+    </table>
+
+</div>
+<!-- //Product Description Area -->
+
+<!-- Javascript -->
+<script>
+
     // Quatity add/minus
     let plusQuantity = document.querySelector("#plusBTN");
     let minusQuantity = document.querySelector("#minusBTN");
@@ -321,7 +413,15 @@
         Quantity.value = parseInt(Quantity.value) - 1;
     });
 
+
 </script>
+
+
+    let backBTN = document.querySelector("returnBtn");
+
+</script>
+
+
 
 </body>
 
