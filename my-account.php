@@ -104,13 +104,13 @@ session_start();
                         </div><br>
                         <div class='col-md-19' style='text-align: left;'>
                         <label class='labels text-light fs-5'>New Password</label>
-                        <input type='text' class='form-control' placeholder='***********' value='' name='u_pw'>
+                        <input type='password' class='form-control' placeholder='***********' name='u_pw'>
                         </div>
                         
                     </div>
                     <div class='mt-5 text-center'>
                     <button class='btn btn-light profile-button' type='submit' name='save-profile-btn' style='margin-right: -180px;'>Save Profile Changes</button>
-                    <button class='btn btn-light profile-button' type='submit' name='save-profile-btn' style='margin-left: -180px;''>Disard Changes</button>
+                    <button class='btn btn-light profile-button' type='reset' name='discard-changes-btn' style='margin-left: -180px;'>Disard Changes</button>
                     </div>
                     </form>
                 </div>
