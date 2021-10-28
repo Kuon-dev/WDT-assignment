@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<!-- #### Might need redo -->
-
     <!-- Page Title -->
     <title>Paws Heaven Cart</title>
 
@@ -145,7 +142,7 @@
 	<?php 
 		//connect database
 		include ("conn.php"); 
-		//get data from database     **innerjoin
+		//get data from database
 		$mysql_run = mysqli_query($con, "SELECT * FROM shopping_cart;");
 		while ($row = mysqli_fetch_assoc($mysql_run)) {
 			$data ='<div class="childbox" onclick="redirect()">
@@ -191,9 +188,15 @@
                     RM <h3>200</h3>
                 </div>
                 <!-- remove button -->
-                <button id="removeBTN" onclick="redirect()">
+                <a href=\"remove.php?id=";
+                '.$row['Product_ID'].';
+                "\" onClick=\"return confirm(Delete ;
+                '.$row['Product_ID'].';
+                details?);\">
+                <button id="removeBTN">
                     <b>Remove</b>
                 </button>
+                </a>
             </div>
         </div>
 			
@@ -221,19 +224,18 @@
     </a>
 </div>
 
-<!-- javascript -->
+<!-- javascrip -->
 <script>
-    //document.querySelectorAll('.productPrice > h4').forEach(x => console.log(x.innerHTML))
+    document.querySelectorAll('.productPrice > h4').forEach(x => console.log(x.innerHTML))
 
     // Product Price Calculation
     let productTotalPrice = document.querySelector('#totalPrice > h3').innerHTML
     let productPriceUnit = document.querySelector('.productPrice > h4').innerHTML
     let produtQuantity = document.querySelector("#productQuantity").value
-    
-    
+
     productTotalPrice = (productPriceUnit * produtQuantity)
     document.querySelector('#totalPrice > h3').innerHTML = productTotalPrice
-//add number unque
+
     // CheckOut Price
     let checkoutPrice = document.querySelectorAll('.checkoutPrice > h3')
     console.log(checkoutPrice)
@@ -265,16 +267,8 @@
         document.querySelector('#totalPrice > h3').innerHTML = productTotalPrice;
     });
 
-    //document.querySelector('#removeBTN').forEach(x => console.log(x.innerHTML))
-    let removeProduct = document.querySelector('#removeBTN')
-    console.log(removeProduct)
 
-    for (var i = 0; i < removeProduct.length; i++) {
-        var button = removeProduct[i]
-        button.addEventListener('click' , function() {
-            console.log('clicked')
-        })
-    }
+    
 
 </script>
 

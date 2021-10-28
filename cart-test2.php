@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<!-- #### Might need redo -->
-
     <!-- Page Title -->
     <title>Paws Heaven Cart</title>
 
@@ -145,7 +142,7 @@
 	<?php 
 		//connect database
 		include ("conn.php"); 
-		//get data from database     **innerjoin
+		//get data from database
 		$mysql_run = mysqli_query($con, "SELECT * FROM shopping_cart;");
 		while ($row = mysqli_fetch_assoc($mysql_run)) {
 			$data ='<div class="childbox" onclick="redirect()">
@@ -191,7 +188,7 @@
                     RM <h3>200</h3>
                 </div>
                 <!-- remove button -->
-                <button id="removeBTN" onclick="redirect()">
+                <button id="removeBTN">
                     <b>Remove</b>
                 </button>
             </div>
@@ -223,7 +220,7 @@
 
 <!-- javascript -->
 <script>
-    //document.querySelectorAll('.productPrice > h4').forEach(x => console.log(x.innerHTML))
+    // document.querySelectorAll('.productPrice > h4').forEach(productTotalPrice => console.log(productTotalPrice.innerHTML))
 
     // Product Price Calculation
     let productTotalPrice = document.querySelector('#totalPrice > h3').innerHTML
@@ -233,7 +230,7 @@
     
     productTotalPrice = (productPriceUnit * produtQuantity)
     document.querySelector('#totalPrice > h3').innerHTML = productTotalPrice
-//add number unque
+
     // CheckOut Price
     let checkoutPrice = document.querySelectorAll('.checkoutPrice > h3')
     console.log(checkoutPrice)
@@ -265,16 +262,8 @@
         document.querySelector('#totalPrice > h3').innerHTML = productTotalPrice;
     });
 
-    //document.querySelector('#removeBTN').forEach(x => console.log(x.innerHTML))
-    let removeProduct = document.querySelector('#removeBTN')
-    console.log(removeProduct)
-
-    for (var i = 0; i < removeProduct.length; i++) {
-        var button = removeProduct[i]
-        button.addEventListener('click' , function() {
-            console.log('clicked')
-        })
-    }
+    let RemoveProduct = document.getElementById('removeBTN')
+    console.log(RemoveProduct)
 
 </script>
 
