@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 21, 2021 at 02:11 PM
+-- Generation Time: Oct 28, 2021 at 05:54 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS `member` (
 --
 
 INSERT INTO `member` (`Email`, `Member_Name`, `Contact_Number`, `Address`, `Password`) VALUES
+('katherine@gmail.com', 'Katherine', '0128927718', '1,Jalan123,Taman1,83000BatuPahat Johor', 'katherine123'),
 ('mm@gmail.com', 'mmm', '0138976672', 'mm', 'mm');
 
 -- --------------------------------------------------------
@@ -76,7 +77,14 @@ CREATE TABLE IF NOT EXISTS `message` (
   `Email` varchar(50) NOT NULL,
   `Message` text NOT NULL,
   PRIMARY KEY (`Message_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`Message_ID`, `Name`, `Email`, `Message`) VALUES
+(5, 'katherine', '1@mail.com', 'lll');
 
 -- --------------------------------------------------------
 
@@ -92,8 +100,8 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL,
   `Purchase_Date` date NOT NULL,
-  `Tracking Number` varchar(50) NOT NULL,
-  PRIMARY KEY (`Order_ID`),
+  `Tracking Number` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`Order_ID`,`Product_ID`),
   KEY `Email` (`Email`),
   KEY `Product_ID` (`Product_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -186,6 +194,7 @@ CREATE TABLE IF NOT EXISTS `staff` (
   `Staff_Name` varchar(50) NOT NULL,
   `Password` varchar(20) NOT NULL,
   `Position` varchar(30) NOT NULL,
+  `Contact_Number` varchar(11) NOT NULL,
   PRIMARY KEY (`Staff_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -193,32 +202,10 @@ CREATE TABLE IF NOT EXISTS `staff` (
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`Staff_ID`, `Staff_Name`, `Password`, `Position`) VALUES
-('W001', 'Ahmad', 'W001Ahmad', 'Manager'),
-('W002', 'Catherine', 'W002Catherine', 'Staff'),
-('W003', 'Bob', 'W003Bob', 'Staff');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `staff_contact`
---
-
-DROP TABLE IF EXISTS `staff_contact`;
-CREATE TABLE IF NOT EXISTS `staff_contact` (
-  `Staff_ID` varchar(20) NOT NULL,
-  `Contact_Number` varchar(11) NOT NULL,
-  PRIMARY KEY (`Contact_Number`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `staff_contact`
---
-
-INSERT INTO `staff_contact` (`Staff_ID`, `Contact_Number`) VALUES
-('W001', '0138279911'),
-('W002', '0129862789'),
-('W003', '01111927711');
+INSERT INTO `staff` (`Staff_ID`, `Staff_Name`, `Password`, `Position`, `Contact_Number`) VALUES
+('W001', 'Ahmad', 'W001Ahmad', 'Manager', '0138279911'),
+('W002', 'Catherine', 'W002Catherine', 'Staff', '0129862789'),
+('W003', 'Bob', 'W003Bob', 'Staff', '01111927711');
 
 -- --------------------------------------------------------
 

@@ -47,7 +47,7 @@ else {
                 <li><a href='#' class='nav-top-text'>Profile</a> |
                 <ul>
                 <li><a href='my-account.php'>My account</a></li>
-                <li><a href='#'>Cart</a></li>
+                <li><a href='cart.php'>Cart</a></li>
                 <li><a href='#'>Purchase History</a></li>
                 <li><a href='#'>Order Status</a></li>
                 <li><a href='logout.php'>Logout</a></li>
