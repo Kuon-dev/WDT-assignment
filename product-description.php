@@ -58,13 +58,13 @@
 
         .productDescriptionContainer {
             display: flex;
-            height: 450px;
+            height: flex;
             border-bottom: 1px solid grey;
         }
 
         .productImageContainer {
             width: 600px;
-            height: 450px;
+            height: flex;
             border-right: 1px solid grey;
             float: left;
         }
@@ -85,7 +85,7 @@
             text-align: left;
             padding: 20px;
             font-weight: bold;
-            font-size: 40pt;
+            font-size: 18pt;
         }
 
         .productManufacturer {
@@ -97,7 +97,7 @@
         }
 
         .productPrice {
-            font-size: 35pt;
+            font-size: 20pt;
             font-weight: bold;
             padding: 20px;
             text-align: left;
@@ -113,7 +113,7 @@
 
         .productPrice p:last-child {
             float: right;
-            padding-right: 50%;
+            padding-right: 65%;
             font-size: 16pt;
             font-weight: normal;
         }
@@ -121,12 +121,12 @@
         .productDescription {
             text-align: left;
             padding: 20px;
-            height: 100px;
+            height: flex;
             border-bottom: 1px solid grey;
         }
 
         .productQuantity {
-            padding-top: 30px;
+            padding-top: 10px;
             padding-bottom: 20px;
         }
 
@@ -146,7 +146,7 @@
         #productQuantity {
             transform: translateY(-3px);
             border: 2px solid black;
-            width: 150px;
+            width: 80px;
             margin: 0px 30px;
         }
 
@@ -177,8 +177,9 @@
         }
 
         .Reviews {
-            height: 70px;
-            border: 1px solid black
+            height: flex;
+            width: 850px;
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -202,104 +203,126 @@
         <?php 
             //connect database
             include ("conn.php");
-            $product_id=$_GET['Product_ID'];
+            $Product_ID=$_GET['Product_ID'];
             //get data from database
-            $sql = "SELECT * FROM product WHERE Product_ID=$product_id";
-            $sql = "SELECT * FROM product, supplier, feedback, member WHERE Product_ID=$product_id, product.Supplier_Id=supplier.Supplier_Id, product.Product_ID=feedback.Product_ID, feedback.Email=member.Email ";
-            if (!$con) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-            $result = mysqli_query($con, $sql);
-            if (mysqli_num_rows($result) > 0) 
-            {
-                while($row = mysqli_fetch_assoc($result)) 
-                {
-                    echo '
-        <!-- Product Description -->
-        <div class="productDescriptionContainer">
-            <!-- product image -->
-            <div class="productImageContainer">
-                <img src="image/whiskas-adult-ocean-fish.jpg" alt="Product Image" >
-            </div>
+            $mysql_run=mysqli_query($con, "SELECT * FROM product WHERE Product_ID = '$Product_ID';");
+            while ($row=mysqli_fetch_assoc($mysql_run)) {
+                $Product_Image=$row["Product_Image"];
+                $Product_Name=$row["Product_Name"];
+                $Price=$row["Price"];
+                $Supplier_ID=$row["Supplier_ID"];
+                $Description=$row["Description"];
+                $sql_run=mysqli_query($con, "SELECT * FROM supplier WHERE Supplier_ID = '$Supplier_ID';");
+                while ($row=mysqli_fetch_assoc($sql_run)) {
+                    $Supplier_Name=$row["Supplier_Name"];
+                
+                            echo '
+                            <!-- Product Description -->
+                            <div class="productDescriptionContainer">
+                                <!-- product image -->
+                                <div class="productImageContainer">
+                                <img src="data:image/jpg;base64,'.base64_encode($Product_Image).'" />
+                                </div>
+                                <!-- product info -->
+                                <div class="productInfo">
+                                    <!-- product name -->
+                                    <div class="productName">
+                                        '.$Product_Name.'
+                                    </div>
+                                    <!-- product manufacturer -->
+                                    <div class="productManufacturer">
+                                        '.$Supplier_Name.' 
+                                    </div>
+                                    <!-- product price -->
+                                    <div class="productPrice">
+                                        <p>RM </p>
+                                        '.$Price.' 
+                                        <p> / unit</p>
+                                    </div>
+                                    <!-- product description -->
+                                    <div class="productDescription">
+                                        '.$Description.' 
+                                    </div>
+                                    <!-- product quantity -->
+                                    <div class="productQuantity">
 
-            <!-- product info -->
-            <div class="productInfo">
-                <!-- product name -->
-                <div class="productName">
-                    $'.$row["Product_Name"].'
-                </div>
-                <!-- product manufacturer -->
-                <div class="productManufacturer">
-                    $'.$row["Supplier_Name"].' 
-                </div>
-                <!-- product price -->
-                <div class="productPrice">
-                    <p>RM </p>
-                    $'.$row["Price"].' 
-                    <p> / unit</p>
-                </div>
-                <!-- product description -->
-                <div class="productDescription">
-                    $'.$row["Description"].' 
-                </div>
-                <!-- product quantity -->
-                <div class="productQuantity">
+                                        <button id="plusBTN">
+                                            +
+                                        </button>
 
-                    <button id="plusBTN">
-                        +
-                    </button>
+                                        <input id="productQuantity" type="number" value="1" min="1" >
 
-                    <input id="productQuantity" type="number" value="0" min="0">
+                                        <button id="minusBTN">
+                                            −
+                                        </button>
+                                    </div>
+                                    <!-- add to cart button -->
+                                    <div class="addtocartContainer">
+                                        <a href="cart.php">
+                                            <button id="addtocartBTN">
+                                                ADD TO CART
+                                            </button>
+                                        </a>
+                                        <br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Product Description -->
+                        <!-- Customer Review -->
+                        <div class="cusReviewContainer">
+                            <!-- review title -->
+                            <div class="reviewTitle">
+                                Review
+                            </div>
+                            </div>'; 
+                        }
+                        }
+                        $count="SELECT Product_ID, COUNT(Product_ID) FROM feedback WHERE Product_ID = '$Product_ID' GROUP BY NOT NULL";
+                        if ($result=mysqli_query($con,$count))  {
+                            // Return the number of rows in result set
+                            $rowcount=mysqli_num_rows($result);	 
+                        } 
+                        if ($rowcount<=0){
+                            echo ' 
+                            <div class="reviewHolder">
+                                <div class="Names">
+                                    No Review
+                                </div>
+                            </div>
+                            ';
+                        }
+                        else{
+                            $sql=mysqli_query($con, "SELECT * FROM feedback WHERE Product_ID = '$Product_ID';");
+                            while ($row=mysqli_fetch_assoc($sql)) {
+                            $Email=$row["Email"];
+                            $Review=$row["Review"];
+                            $run=mysqli_query($con, "SELECT * FROM member WHERE Email = '$Email';");
+                            while ($row=mysqli_fetch_assoc($run)) {
+                            $Member_Name=$row["Member_Name"];
+                                echo'
+                                    <!-- reviews -->
+                                    <div class="reviewHolder">
+                                        <div class="Names">
+                                            '.$Member_Name.' 
+                                            <div class="Reviews">
+                                                '.$Review.' 
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                ';
+                            }
+                            }
+                        }
+                        
+                    ?>    
+                        <!-- //Customer Review -->
 
-                    <button id="minusBTN">
-                        −
-                    </button>
-                </div>
-                <!-- add to cart button -->
-                <div class="addtocartContainer">
-                    <a href="cart.php">
-                        <button id="addtocartBTN">
-                            ADD TO CART
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- //Product Description -->
+                    <!-- //Card -->
 
-        <!-- Customer Review -->
-        <div class="cusReviewContainer">
-            <!-- review title -->
-            <div class="reviewTitle">
-                Review
-            </div>
-            <!-- reviews -->
-            <div class="reviewHolder">
-                <div class="firstName Names">
-                    $'.$row["Member_Name"].' 
-                    <div class="firstReview Reviews">
-                        $'.$row["Review"].' 
                     </div>
                 </div>
-                <hr>
-                <div class="secondName Names">
-                    $'.$row["Member_Name"].' 
-                <div class="secondReview Reviews">
-                    $'.$row["Review"].' 
-                </div>
-            </div>
-        </div>
-        ';
-        $_SESSION['product_id'] = $row['Product_Id'];
-    }
-} 
-?>	
-        <!-- //Customer Review -->
-
-    <!-- //Card -->
-
-
-</div>
 <!-- //Main Content Area -->
 
 <!-- Javascript -->
