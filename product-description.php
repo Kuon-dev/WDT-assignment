@@ -168,17 +168,20 @@
         }
 
         .reviewHolder {
-            padding: 30px;
+            padding-left:150px;
+            padding-right:140px;
             text-align: left;
+            
         }
 
         .Names {
-            padding-bottom: 10px;
+            padding-bottom: 5px;
+            align-items: center;
         }
 
         .Reviews {
             height: flex;
-            width: 850px;
+            width: 930px;
             border: 1px solid black;
         }
     </style>
