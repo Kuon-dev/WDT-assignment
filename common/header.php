@@ -48,8 +48,8 @@ else {
                 <ul>
                 <li><a href='my-account.php'>My account</a></li>
                 <li><a href='cart.php'>Cart</a></li>
-                <li><a href='#'>Purchase History</a></li>
-                <li><a href='#'>Order Status</a></li>
+                <li><a href='purchase-history.php'>Purchase History</a></li>
+                <li><a href='https://www.skynet.com.my/track'>Order Status</a></li>
                 <li><a href='logout.php'>Logout</a></li>
                 </ul>
                 </li>
