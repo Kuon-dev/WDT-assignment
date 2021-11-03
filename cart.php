@@ -149,10 +149,17 @@ ID > Name refer to product decript -->
             
         }
 
+        .paymentmethod{
+            float: right;
+            margin-top: 10px;
+            margin-right: 90px;
+            width:80px;
+        }
+
         #checkoutBTN {
             float: right;
-            margin-top: 30px;
-            margin-right: 50px;
+            margin-top: 10px;
+            margin-right: 30px;
             width: 120px;
             height: 40px;
             border: 1px solid black;
@@ -268,17 +275,28 @@ ID > Name refer to product decript -->
     // close database connection
     ?>
     <!-- checkout button -->
-    <a href="checkout.php">
-        <button id="checkoutBTN">
+    <form action="checkout.php" method="POST">
+        <button id="checkoutBTN" type="submit" name="checkout">
             Check Out
         </button>
-    </a>
+        <div class="paymentmethod">
+            <select name="payment_select" required="required">
+                <option value="">Payment Method</option>
+                <option value="online">Online Banking</option>
+                <option value="debit">Debit Card</option>
+                <option value="credit">Credit Card</option>
+            </select>
+        </div>
+    </form>
 
 </div>
-
-
 </body>
-
 <!-- Footer -->
 <div id="footer"></div>
 </html>
+
+<?php 
+    if(isset($_POST["checkout"])){
+        $payment_select=$_POST["payment_select"];
+    }
+?>
