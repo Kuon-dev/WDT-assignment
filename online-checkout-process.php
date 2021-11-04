@@ -35,11 +35,11 @@ if(isset($_SESSION["user_email"])){
         }
         else {
         $delete = mysqli_query($con,"DELETE FROM shopping_cart WHERE Email='$Email'");
-        //$row = mysqli_fetch_assoc($delete);
-        // echo '<script>
-        // alert("Product had been checkout. You could view the order in Purchase History. Tracking number will be sent to your email.");
-        // window.location.href = "index.php";
-        // </script>';
+        $row = mysqli_fetch_assoc($delete);
+        echo '<script>
+        alert("Product had been checkout. You could view the order in Purchase History. Tracking number will be sent to your email.");
+        window.location.href = "index.php";
+        </script>';
         }
     }
     mysqli_close($con);

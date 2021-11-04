@@ -112,7 +112,7 @@
         <div class="register-form sign-in-area">
             <form action="admin-login.php" method="POST">
                 <h1>Hey Admin! Sign in now!</h1>
-                <!-- Request Email -->
+                <!-- Request Staff ID -->
                 <input type="text" placeholder="Staff_ID" name="Staff_ID" required/>
                 <!-- Request Password -->
                 <input type="password" placeholder="Password" name="SignIn_password" required/>
