@@ -261,7 +261,7 @@
                                     </div>
                                     <!-- add to cart button -->
                                     <div class="addtocartContainer">
-                                        <a href="cart.php">
+                                        <a href="add-to-cart.php?Product_ID='.$Product_ID.'">
                                             <button id="addtocartBTN">
                                                 ADD TO CART
                                             </button>
@@ -286,6 +286,7 @@
                             // Return the number of rows in result set
                             $rowcount=mysqli_num_rows($result);	 
                         } 
+                        //if don't have review in database then display no review
                         if ($rowcount<=0){
                             echo ' 
                             <div class="reviewHolder">
@@ -296,6 +297,7 @@
                             ';
                         }
                         else{
+                            //if there are review in database then get the review data and display
                             $sql=mysqli_query($con, "SELECT * FROM feedback WHERE Product_ID = '$Product_ID';");
                             while ($row=mysqli_fetch_assoc($sql)) {
                             $Email=$row["Email"];

@@ -66,8 +66,10 @@ session_start();
         </style>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
     <?php
+    //display user personal details
     if (isset($_SESSION["user_email"])) {
         echo "
         <div class='container rounded bg-secondary mt-5 mb-5'>
@@ -130,5 +132,6 @@ session_start();
     };
     ?>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>

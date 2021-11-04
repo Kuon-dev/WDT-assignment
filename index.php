@@ -104,11 +104,13 @@
 <body>
 <!-- Header -->
 <div id="header"></div>
+<!-- Include Banner -->
 <div class="banner-area">
     <h2 class="poppins fw-bolder">Welcome to PawsHeaven</h2>
     <h3 class="poppins fs-2 fw-bolder text-white" stlye="color: white;">Largest Online Pet Store in Malaysia</h3>
 </div>
 <div class="a-divider"></div>
+<!-- Main Content -->
 <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <div>
         <h2 class="sora center fs-1 fw-bolder">Popular Products</h2>

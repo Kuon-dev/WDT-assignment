@@ -26,10 +26,11 @@ if(isset($_POST['save-profile-btn'])) {
     if(($_POST['u_pw'] == '')) {
         $u_pw = $_SESSION["user_pw"];
     }
-
+    //get the data from database
     $select= "SELECT * FROM member WHERE Email='$id'";
     $sql = mysqli_query($con, $select);
     $row = mysqli_fetch_assoc($sql);
+    //update the data in database
     $update_profile = "UPDATE member SET Email='$u_email', Member_Name='$u_name', Address='$u_add', Contact_Number='$u_phnum', Password='$u_pw' WHERE Email='$id'";
     $_SESSION['user_email'] = $u_name;
     $_SESSION["user_name"] = $u_email;
