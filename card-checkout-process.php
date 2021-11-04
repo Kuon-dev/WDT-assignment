@@ -1,5 +1,7 @@
 <?php 
+//connect to database
 include("conn.php");
+//start session
 ob_start();
 session_start();
 if(isset($_SESSION["user_email"])){
@@ -9,6 +11,7 @@ if(isset($_SESSION["user_email"])){
         $address = $_SESSION["user_add"];
     }
     $cardNumber=$_POST["cardNumber"];
+    //count order id
     $sql0="SELECT Order_ID from orders";
     $runquery=mysqli_query($con,$sql0);
     if (mysqli_num_rows($runquery) == 0) {
@@ -22,18 +25,22 @@ if(isset($_SESSION["user_email"])){
         $order_id=$order_id+1;
         echo(mysqli_error($con));
     }
+    //get today date
     $date = date('Y-m-d H:i:s');
+    //get product checkout from shopping cart table
     $mysql_run = mysqli_query($con, "SELECT * FROM shopping_cart WHERE Email='$Email'");
     while ($row=mysqli_fetch_assoc($mysql_run)) {
     $Product_ID = $row["Product_ID"];
     $Quantity = $row["Quantity"];
     $Price = $row["Price"];
+    //insert order into database
     $sql = "INSERT INTO orders (Order_ID,Email,Product_ID,Quantity,Price,Purchase_Date,Shipping_Address,Card_Number)
     VALUES ('$order_id','$Email','$Product_ID','$Quantity','$Price','$date','$address','$cardNumber')";
     if (!mysqli_query($con,$sql)) {
         die('Error: ' . mysqli_error($con));
         }
         else {
+        //delete items in shopping cart after order successfully made
         $delete = mysqli_query($con,"DELETE FROM shopping_cart WHERE Email='$Email'");
         $row = mysqli_fetch_assoc($delete);
         echo '<script>

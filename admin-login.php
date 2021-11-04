@@ -1,19 +1,21 @@
 <?php
+    //connect to database
     include('conn.php');
     $Staff_ID=$_POST["Staff_ID"];
     $SignIn_password=$_POST["SignIn_password"];
+    //compare staff id and password entered with the data in database
     $sql=mysqli_query($con,"SELECT Staff_ID, Password FROM staff WHERE Staff_ID='$Staff_ID' AND Password='$SignIn_password' limit 1");
 
-    //Check is the data available in database
+    //if the data entered correct
     if(mysqli_num_rows($sql)==1)
     {
         //retrieve data from database
         $data=mysqli_fetch_array($sql);
 
-        //ii.Umpukkan kepada nilai session
+        //get user data
         $user=$data['Staff_ID'];
 
-        //iii.gerak ke menu utama
+        //start session with the personal details
         session_start();
         $user_data_result = mysqli_query($con, "SELECT * FROM staff WHERE Staff_ID='$user' limit 1");
         $user_data = mysqli_fetch_array($user_data_result);
@@ -23,15 +25,16 @@
         $_SESSION["user_position"] = $user_data['Position'];
         $_SESSION["user_phnum"] = $user_data['Contact_Number'];     
 
+        //go to index
         header("location: index.php");
         exit();
     }
     else
     {
-        //i.gerak ke previous page
-        // echo"<script>
-        //     alert('Failed to login.');
-        //     window.location.href='admin-login.php';
-        //     </script>";
+        //move to admin login page
+        echo"<script>
+            alert('Failed to login.');
+            window.location.href='admin-login.php';
+            </script>";
     }
 ?>

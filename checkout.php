@@ -136,12 +136,15 @@ session_start();
         </style>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
+    <!-- Checkout Form -->
     <div class="content-area">
         <div class="container-fluid">
             <div class="row-checkout">
             <?php
             $payment_select=$_POST["payment_select"];
+            //if the payment is using card then display the form
             if($payment_select=="debit"||$payment_select=="credit"){
                 if(isset($_SESSION["user_email"])){
                     $sql = "SELECT * FROM member WHERE Email='$_SESSION[user_email]'";
@@ -205,6 +208,7 @@ session_start();
                 }
 
             }
+            //if the payment is online banking then display the form
             else if($payment_select=="online"){
                 if(isset($_SESSION["user_email"])){
                     $sql = "SELECT * FROM member WHERE Email='$_SESSION[user_email]'";
@@ -213,7 +217,7 @@ session_start();
                 echo'
                 <div class="col-75">
                     <div class="container-checkout">
-                    <form id="checkout_form" action="checkout-process.php" method="POST" class="was-validated">
+                    <form id="checkout_form" action="online-checkout-process.php" method="POST" class="was-validated">
     
                         <div class="row-checkout">
                         
@@ -243,10 +247,10 @@ session_start();
                         
                         </div>
                         </div>
+                        <input type="submit" id="submit" value="Continue to checkout" class="onl-checkout-btn" name="onl-checkout-btn">
                         </form>
                         </div>
                         </div>
-                        <input type="submit" id="submit" value="Continue to checkout" class="onl-checkout-btn" name="onl-checkout-btn">
 				</div>
 			</div>';}  
                         else{
@@ -255,10 +259,11 @@ session_start();
                     }  
                     
 		?>
-
+            <!-- List of product buy -->
 			<div class="col-25">
 				<div class="container-checkout">
 				<?php
+                //get the data from database and display
 				if (isset($_SESSION["user_email"])) {
                     $Email=$_SESSION["user_email"];
 					$run=mysqli_query($con, "SELECT Email, SUM(Price*Quantity) As Total_Payment FROM shopping_cart HAVING SUM(Price*Quantity)=(SELECT MAX(Total_Payment) FROM (SELECT SUM(Price*Quantity) As Total_Payment FROM shopping_cart WHERE Email='$Email') AS Total_Payment)");
@@ -299,6 +304,7 @@ session_start();
 
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>
 

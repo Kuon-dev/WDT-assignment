@@ -17,7 +17,9 @@
         </script>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
+    <!-- About Us Content -->
     <div class="content-area">
       <div>
         <div>
@@ -37,6 +39,7 @@
       </div>
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>
 

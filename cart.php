@@ -199,6 +199,7 @@ ID > Name refer to product decript -->
         while ($row = mysqli_fetch_assoc($sql_run)) {
             $Product_Image=$row['Product_Image'];
             $Product_Name=$row['Product_Name'];
+        //display the data
         echo
         '<div class="parentBox">
             <div class="childBox">
@@ -260,9 +261,11 @@ ID > Name refer to product decript -->
         </div>';
         }
     }
+        //calculate the total payment
         $run=mysqli_query($con, "SELECT Email, SUM(Price*Quantity) As Total_Payment FROM shopping_cart HAVING SUM(Price*Quantity)=(SELECT MAX(Total_Payment) FROM (SELECT SUM(Price*Quantity) As Total_Payment FROM shopping_cart WHERE Email='$Email') AS Total_Payment)");
         while ($row=mysqli_fetch_assoc($run)) {
             $Total_Payment=$row['Total_Payment'];  
+        //display the total payment
         echo'
         <div class="checkoutPriceHolder">
             <div class="checkoutPrice"> 
@@ -279,6 +282,7 @@ ID > Name refer to product decript -->
         <button id="checkoutBTN" type="submit" name="checkout">
             Check Out
         </button>
+        <!-- Choose Payment Method -->
         <div class="paymentmethod">
             <select name="payment_select" required="required">
                 <option value="">Payment Method</option>
