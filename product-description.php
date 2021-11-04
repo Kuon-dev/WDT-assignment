@@ -125,31 +125,6 @@
             border-bottom: 1px solid grey;
         }
 
-        .productQuantity {
-            padding-top: 10px;
-            padding-bottom: 20px;
-        }
-
-        .productQuantity button{
-            border: 2px solid black;
-            background-color: white;
-            width: 40px;
-            font-weight: bold;
-            font-size: 20pt;
-        }
-
-        .productQuantity button:hover {
-            cursor: pointer;
-            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        }
-
-        #productQuantity {
-            transform: translateY(-3px);
-            border: 2px solid black;
-            width: 80px;
-            margin: 0px 30px;
-        }
-
         #addtocartBTN {
             border: 2px solid black;
             background-color: white;
@@ -263,19 +238,7 @@
                                     <div class="productDescription">
                                         '.$Description.' 
                                     </div>
-                                    <!-- product quantity -->
-                                    <div class="productQuantity">
-
-                                        <button id="plusBTN">
-                                            +
-                                        </button>
-
-                                        <input id="productQuantity" type="number" value="1" min="1" >
-
-                                        <button id="minusBTN">
-                                            −
-                                        </button>
-                                    </div>
+                                    
                                     <!-- add to cart button -->
                                     <div class="addtocartContainer">
                                         <a href="add-to-cart.php?Product_ID='.$Product_ID.'">
@@ -356,27 +319,6 @@
                     </div>
                 </div>
 <!-- //Main Content Area -->
-
-<!-- Javascript -->
-<script>
-
-    // Quatity add/minus
-    let plusQuantity = document.querySelector("#plusBTN");
-    let minusQuantity = document.querySelector("#minusBTN");
-    let Quantity = document.querySelector("#productQuantity");
-
-    plusQuantity.addEventListener('click', () => {
-        Quantity.value = parseInt(Quantity.value) + 1;
-    });
-
-    minusQuantity.addEventListener('click', () => {
-        if (Quantity.value == 0) {
-            return;
-        }
-        Quantity.value = parseInt(Quantity.value) - 1;
-    });
-
-</script>
 
 </body>
 
