@@ -184,6 +184,23 @@
             width: 930px;
             border: 1px solid black;
         }
+
+        .rev {
+            height: flex;
+            width: 840px;
+            border: 1px solid black;
+        }
+
+        #revbtn {
+            border: 2px solid black;
+            background-color: white;
+            width: 80px;
+        }
+
+        #revbtn:hover {
+            cursor: pointer;
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
     </style>
 </head>
 <body>
@@ -278,15 +295,26 @@
                             <div class="reviewTitle">
                                 Review
                             </div>
-                            </div>'; 
+                            </div>
+                        <div class="reviewHolder">
+                            <form action="review.php" method="POST">
+                                <input type="text" style="display:none" value="'.$Product_ID.'"  name="product_id">
+                                <input type="text" class="rev" placeholder="Write Review Here." value="" name="review" required>
+                                <button type="submit" id="revbtn" name"revbtn">Submit</button>
+                            </form>
+                        </div>
+                        <br>';
+                        if(isset($_POST['revbtn'])){
+                            $Product_ID=$_POST['product_id'];
+                            $review=$_POST['review'];
                         }
-                        }
+                    }
+                    }
                         $count="SELECT Product_ID, COUNT(Product_ID) FROM feedback WHERE Product_ID = '$Product_ID' GROUP BY NOT NULL";
                         if ($result=mysqli_query($con,$count))  {
                             // Return the number of rows in result set
                             $rowcount=mysqli_num_rows($result);	 
                         } 
-                        //if don't have review in database then display no review
                         if ($rowcount<=0){
                             echo ' 
                             <div class="reviewHolder">
@@ -297,7 +325,6 @@
                             ';
                         }
                         else{
-                            //if there are review in database then get the review data and display
                             $sql=mysqli_query($con, "SELECT * FROM feedback WHERE Product_ID = '$Product_ID';");
                             while ($row=mysqli_fetch_assoc($sql)) {
                             $Email=$row["Email"];
