@@ -129,7 +129,7 @@
                 <hr>
 
                 <div class="productName">
-                    <a href="product-description.php?p=$Product_ID">
+                    <a href="product-description.php?Product_ID='.$Product_ID.'">
                     <h5>'.$row['Product_Name'].'</h5></a>
                 </div>
 
@@ -137,7 +137,7 @@
                     RM '.$row['Price'].'<br>
                 </div>
 
-                <a href="#">
+                <a href="add-to-cart.php?Product_ID='.$Product_ID.'">
                     <button class="addtocartBTN">Add To Cart</button>
                 </a>
                 </div>
