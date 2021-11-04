@@ -69,15 +69,19 @@
         </style>
     </head>
     <body>
+    <!-- Include Background -->
     <div class="background"></div>
+    <!-- Header -->
     <div id="header"></div>
+    <!-- Main Content -->
     <div class="content-area">
       <div>
         <div>
             <img src="image/transparent 1.png" width=300px style="margin-left:-40px; margin-top:-40px; filter: brightness(180%);">
-          <p class="sora fs-2 fw-bold text-white">Contact Us</p>
-          <p class="sora fs-4 text-white">Email: paws_heaven@gmail.com<br>
+            <p class="sora fs-2 fw-bold text-white">Contact Us</p>
+            <p class="sora fs-4 text-white">Email: paws_heaven@gmail.com<br>
             Contact Number: 0192881777</p>
+            <!-- Contact Us Form -->
                 <form action="#" method="POST">
                 <div class="section">
 		            <div class="label">
@@ -106,6 +110,7 @@
       </div>
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer" style="position: relative; margin-top: 20px;"></div>
 </html>
 
@@ -114,7 +119,9 @@
         $contact_name=$_POST["contact_name"];
         $contact_email=$_POST["contact_email"];
         $message=$_POST["message"];
+        //connect to database
         include("conn.php");
+        //insert data into database
         $sql="INSERT INTO message (Name, Email, Message)
         VALUES
         ('$_POST[contact_name]','$_POST[contact_email]','$_POST[message]')";
@@ -126,6 +133,7 @@
         window.location.href = "index.php";
         </script>';
         }
+        //close connection
         mysqli_close($con);
     }
 ?>

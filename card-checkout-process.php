@@ -49,6 +49,7 @@ if(isset($_SESSION["user_email"])){
         </script>';
         }
     }
+    //close connection
     mysqli_close($con);
     }
 ?>

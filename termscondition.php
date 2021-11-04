@@ -31,6 +31,7 @@
     </head>
     <body>
     <body>
+    <!-- Header -->
     <div id="header"></div>
     <br>
     <br>
@@ -41,10 +42,12 @@
     <br>
     <br>
     <br>
+    <!-- Image -->
     <img src="image/terms-and-condition.jpeg" height="400px" width="1000px">
     <br>
     <br>
     <div class="a-divider"></div>
+    <!-- Main Content -->
     <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify"- >- TERMS AND CONDITIONS</h3></li>
@@ -133,5 +136,6 @@
         </ul>
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>

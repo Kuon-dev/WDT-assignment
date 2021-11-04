@@ -54,6 +54,7 @@
         </style>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
     <br>
     <br>
@@ -61,10 +62,12 @@
     <br>
     <br>
     <br>
+    <!-- Include Image -->
     <img src="image/pet-advice.jpg" width="900px">
     <br>
     <br>
     <div class="a-divider"></div>
+    <!-- Main Content -->
     <div class="content-area" style="margin-top: -350px; padding: 250px; padding-bottom: 10px;">
         <h2 class="sora fs-2 fw-bold">Paws Advice</h2>
         <div class="tab">
@@ -267,6 +270,8 @@
         <br><br>
         Written By: Stephanie Dube Dwilson, N.d.</p>
         </div>
+        <!-- Tab Function -->
+        <!-- ref:https://www.w3schools.com/howto/howto_js_tabs.asp -->
         <script>
             function petAdvice(event, pettype) {
             var i, tabcontent, tablinks;
@@ -285,5 +290,6 @@
         </script>
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>

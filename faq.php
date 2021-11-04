@@ -28,6 +28,7 @@
         </style>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
     <br>
     <br>
@@ -35,10 +36,12 @@
     <br>
     <br>
     <br>
+    <!-- Include Image -->
     <img src="image/faqs.jpeg" width="1000px">
     <br>
     <br>
     <div class="a-divider"></div>
+    <!-- Main Content of faq -->
     <div class="content-area" style="margin-top: -300px; padding: 250px; padding-bottom: 10px">
         <ul>
             <li><h3 class="font-sora fs-3 fw-bolder" align="justify"- >- Can I change or cancel my order?</h3></li>
@@ -93,5 +96,6 @@
         </ul>
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>
