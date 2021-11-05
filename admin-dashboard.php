@@ -1,5 +1,7 @@
 <?php
+// connect to database
 include('conn.php');
+// start session
 ob_start();
 session_start();
 ?>
@@ -45,49 +47,53 @@ session_start();
         </style>
     </head>
     <body>
+    <!-- Header -->
     <div id="header"></div>
+    <!-- Main Content -->
     <div class="content-area">
-    <h2>Admin Dashboard</h2>
-    <hr>
-    <div class="Features">
-    <div class="function">
-    <img src="image/Manage-Product.png" width="60px"> 
-    <a href="#">Manage Products</a>
-    </div>
-    
-    <div class="function">
-    <img src="image/supplier.png" width="50px"> 
-    <a href="#">Manage Supplier</a>
-    </div>
-    
-    <div class="function">
-    <img src="image/order.png" width="50px"> 
-    <a href="#">View Orders</a>
-    </div>
-    
-    <div class="function">
-    <img src="image/message.png" width="50px"> 
-    <a href="#">View Customer Message</a>
-    </div>
-    <?php
-    if (isset($_SESSION["user_id"])) {
-        $id = $_SESSION["user_id"];
-    $mysql_run=mysqli_query($con, "SELECT Position FROM staff WHERE Staff_ID = '$id';");
-    while ($row=mysqli_fetch_assoc($mysql_run)) {
-        $Position=$row['Position'];
-        if($Position=="Manager"){
-    echo "
-    <div class='function'>
-    <img src='image/signup.png' width='50px'> 
-    <a href='#'>Sign Up New Admin</a>
-    </div>
-    ";
+        <h2>Admin Dashboard</h2>
+        <hr>
+        <div class="Features">
+        <div class="function">
+        <img src="image/Manage-Product.png" width="60px"> 
+        <a href="#">Manage Products</a>
+        </div>
+        
+        <div class="function">
+        <img src="image/supplier.png" width="50px"> 
+        <a href="#">Manage Supplier</a>
+        </div>
+        
+        <div class="function">
+        <img src="image/order.png" width="50px"> 
+        <a href="#">View Orders</a>
+        </div>
+        
+        <div class="function">
+        <img src="image/message.png" width="50px"> 
+        <a href="#">View Customer Message</a>
+        </div>
+
+        <?php
+        if (isset($_SESSION["user_id"])) {
+            $id = $_SESSION["user_id"];
+        $mysql_run=mysqli_query($con, "SELECT Position FROM staff WHERE Staff_ID = '$id';");
+        while ($row=mysqli_fetch_assoc($mysql_run)) {
+            $Position=$row['Position'];
+            if($Position=="Manager"){
+        echo "
+        <div class='function'>
+        <img src='image/signup.png' width='50px'> 
+        <a href='#'>Sign Up New Admin</a>
+        </div>
+        ";
+            }
         }
-    }
-    }
-    ?>
+        }
+        ?>
         
     </div>
     </body>
+    <!-- Footer -->
     <div id="footer"></div>
 </html>
