@@ -143,7 +143,7 @@
         }
 
         .reviewHolder {
-            padding-left:150px;
+            padding-left:230px;
             padding-right:140px;
             text-align: left;
             
@@ -156,13 +156,13 @@
 
         .Reviews {
             height: flex;
-            width: 930px;
+            width: 1400px;
             border: 1px solid black;
         }
 
         .rev {
             height: flex;
-            width: 840px;
+            width: 1320px;
             border: 1px solid black;
         }
 
