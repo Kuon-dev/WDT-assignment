@@ -20,8 +20,18 @@
             box-sizing: border-box;
         }
 
+        .background {
+            width: 100%;
+            height: 120%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(image/login-background.png);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            background-color: black;
+            position: fixed;
+        }
+
         body {
-            background: rgb(219, 191, 221);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +46,20 @@
             margin: 0 0 0 50;
         }
 
-        button {
+        #return {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+            color: #dfa6c7;
+            padding:5px;
+            margin-top:5px;
+            font-size:18px;
+        }
+
+        .container button {
             border-radius: 20px;
             border: 1px solid rgb(226, 187, 226);
             background-color: rgb(219, 191, 221);
@@ -50,11 +73,11 @@
             transition: transform 80ms ease-in;
         }
 
-        button:active {
+        .container button:active {
             transform: scale(0.95);
         }
 
-        button:focus {
+        .container button:focus {
             outline: none;
         }
 
@@ -64,9 +87,9 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 0 40px;
             height: 100%;
             transform: translateX(70px);
+            
         }
 
         input {
@@ -74,7 +97,7 @@
             border: none;
             padding: 12px 15px;
             margin: 8px 0;
-            width: 80%;
+            width: 60%;
         }
 
         .container {
@@ -91,28 +114,31 @@
 
         .register-form {
             position: absolute;
-            top: 0;
+            top: 10px;
             height: 100%;
             transition: all 0.6s ease-in-out;
         }
 
         .sign-in-area {
-            left: 0;
-            width: 80%;
+            left: 160px;
+            width: 50%;
             z-index: 2;
         }
 </style>
 </head>
 
 <body>
-
+    <div class="background"></div>
     <div class="container" id="container">
-
+    <a href="index.php">
+            <button id="return"> < Back </button>
+        </a>
         <!-- Sign In Form -->
         <div class="register-form sign-in-area">
+        
             <form action="admin-login.php" method="POST">
                 <h1>Hey Admin! Sign in now!</h1>
-                <!-- Request Staff ID -->
+                <!-- Request Email -->
                 <input type="text" placeholder="Staff_ID" name="Staff_ID" required/>
                 <!-- Request Password -->
                 <input type="password" placeholder="Password" name="SignIn_password" required/>
