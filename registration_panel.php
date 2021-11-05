@@ -293,7 +293,7 @@
                 <!-- Request Password -->
                 <input type="password" placeholder="Password" name="SignIn_password" required/>
                 <!-- Link for Forgot Password -->
-                <a href="admin-login.php">Admin Login</a>
+                <a href="admin-login-panel.php">Admin Login</a>
                 <!-- Submit Button -->
                 <button type="submit" name="SignIn_button">Sign In</button>
             </form>
