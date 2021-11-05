@@ -93,10 +93,6 @@ session_start();
                         <input type='text' class='form-control' placeholder='". $_SESSION["user_name"] ."' value='' name='u_name'>
                         </div><br>
                         <div class='col-md-19' style='text-align: left;'>
-                        <label class='labels text-light fs-5'>Email</label>
-                        <input type='email' class='form-control' placeholder='". $_SESSION["user_email"] ."' value='' name='u_email'>
-                        </div><br>
-                        <div class='col-md-19' style='text-align: left;'>
                         <label class='labels text-light fs-5'>Address</label>
                         <input type='text' class='form-control' placeholder='". $_SESSION["user_add"] ."' value='' name='u_add'>
                         </div><br>

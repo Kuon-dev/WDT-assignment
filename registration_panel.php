@@ -45,7 +45,7 @@
             margin: 20px 0 20px;
         }
 	
-	#return {
+	    #return {
             position: absolute;
             top: 5%;
             left: 1%;
@@ -75,16 +75,16 @@
         }
 
         .overlay p {
-            font-size: 18px;
+            font-size: 25px;
             font-weight: 100;
-            line-height: 20px;
+            line-height: 50px;
             letter-spacing: 0.5px;
             margin: 20px 0 30px;
         }
 
         .sign-in-area a {
             color: #333;
-            font-size: 14px;
+            font-size: 20px;
             text-decoration: none;
             margin: 15px 0;
         }
@@ -94,7 +94,7 @@
             border: 1px solid rgb(226, 187, 226);
             background-color:rgb(219, 191, 221);
             color: #FFFFFF;
-            font-size: 13px;
+            font-size: 20px;
             font-weight: bold;
             padding: 12px 45px;
             letter-spacing: 3px;
@@ -132,6 +132,7 @@
             padding: 12px 15px;
             margin: 8px 0;
             width: 100%;
+            font-size:20px;
         }
 
         .container {
@@ -141,9 +142,9 @@
                     0 10px 10px rgba(0,0,0,0.22);
             position: relative;
             overflow: hidden;
-            width: 768px;
+            width: 1000px;
             max-width: 100%;
-            min-height: 500px;
+            min-height: 700px;
         }
 
         .register-form {
@@ -265,7 +266,7 @@
         <!-- Sign Up Form -->
         <div class="register-form sign-up-area">
             <form action="signup.php" method="POST">
-                <h1>Create Account</h1>
+                <h1>Create Account</h1><br>
                 <!-- Request Name -->
                 <input type="text" placeholder="Name" name="SignUp_name"  required/>
                 <!-- Request Mobile Number -->
@@ -275,7 +276,7 @@
                 <!-- Request Email -->
                 <input type="email" placeholder="Email" name="SignUp_email" required/>
                 <!-- Request Password -->
-                <input type="password" placeholder="Password" name="SignUp_password" required/>
+                <input type="password" placeholder="Password" name="SignUp_password" required/><br>
                 <!-- Submit Button -->
                 <button type="submit" name="SignUp_button">Sign Up</button>
             </form>
