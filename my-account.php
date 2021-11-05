@@ -119,6 +119,51 @@ session_start();
         </div>
         ";
     }
+    else if(isset($_SESSION["user_id"])) {
+        echo "
+        <div class='container rounded bg-secondary mt-5 mb-5'>
+        <div class='row' style='margin-top: 200px'>
+            <div class='col-md-4 border-right'>
+                <div class='d-flex flex-column align-items-center text-center p-3 py-5'>
+                    <img class='rounded-circle mt-5' width='150px' src='https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'>
+                    <span class='font-weight-bold'></span>
+                    <span class='text-light'><p>". $_SESSION["user_id"] ."</p></span>
+                </div>
+            </div>
+            <div class='col-md-7 border-right'>
+                <div class='p-3 py-5'>
+                    <div class='d-flex justify-content-between align-items-center mb-2'>
+                        <h4 class='text-right text-light fs-2'> Edit Profile Settings</h4>
+                    </div>
+                    <div class='row mt-10'>
+                    <form action='my-account-update.php' method='POST'>
+                        <div class='col-md-19' style='text-align: left;'>
+                        <label class='labels text-light fs-5'>Name</label>
+                        <input type='text' class='form-control' placeholder='". $_SESSION["user_name"] ."' value='' name='u_name'>
+                        </div><br>
+                        <div class='col-md-19' style='text-align: left;'>
+                        <label class='labels text-light fs-5'>Phone Number</label>
+                        <input type='tel' class='form-control' placeholder='". $_SESSION["user_phnum"] ."' value='' name='u_phnum'>
+                        </div><br>
+                        <div class='col-md-19' style='text-align: left;'>
+                        <label class='labels text-light fs-5'>New Password</label>
+                        <input type='password' class='form-control' placeholder='***********' name='u_pw'>
+                        </div>
+                        
+                    </div>
+                    <div class='mt-5 text-center'>
+                    <button class='btn btn-light profile-button' type='submit' name='save-btn' style='margin-right: -180px;'>Save Profile Changes</button>
+                    <button class='btn btn-light profile-button' type='reset' name='discard-changes-btn' style='margin-left: -180px;'>Disard Changes</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        ";
+    }
 
     else {
         echo"<script>
