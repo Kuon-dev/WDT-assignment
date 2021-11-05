@@ -60,7 +60,7 @@ session_start();
         </div>
         
         <div class="function">
-        <img src="image/supplier.png" width="50px"> 
+        <img src="image/supplier.png" width="60px"> 
         <a href="#">Manage Supplier</a>
         </div>
         
