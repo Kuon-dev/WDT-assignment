@@ -55,6 +55,16 @@ else {
                 </li>
                 ";
               }
+              else if (isset($_SESSION["user_id"])) {
+                echo "
+                <li><a href='#' class='nav-top-text'>Profile</a> |
+                <ul>
+                <li><a href='my-account.php'>My account</a></li>
+                <li><a href='logout.php'>Logout</a></li>
+                </ul>
+                </li>
+                ";
+              }
               else {
                 echo "<li><a href='registration_panel.php' class='nav-top-text'>Sign In</a> |</li>";
               }
@@ -75,7 +85,7 @@ else {
                 <li><a href="dog-food.php">Food</a></li>
                 <li><a href="dog-toys.php">Toys</a></li>
                 <li><a href="dog-hygiene.php">Hygiene</a></li>
-                <li><a href="dog-vitamin.php">Vitamins</a></li>
+                <li><a href="dog-vitamins.php">Vitamins</a></li>
                 <li><a href="dog-cage.php">Cage & Others</a></li>
               </ul>
               </li>
@@ -92,6 +102,15 @@ else {
               <li><a href="packages.php" class="nav-bot-text">Packages</a>|</li>
               <li><a href="paws-deals.php" class="nav-bot-text">Paws Deals</a>|</li>
               <li><a href="pet-advice.php" class="nav-bot-text">Paws Advice</a>|</li>
+              <?php
+
+              if (isset($_SESSION["user_id"])) {
+                echo "
+                <li><a href='admin-dashboard.php' class='nav-bot-text'>Admin</a>|</li>
+                ";
+              }
+      
+              ?>
             </ul>
           </nav>
         </div>
