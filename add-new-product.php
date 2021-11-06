@@ -205,7 +205,7 @@ include "conn.php";
                         Staff ID
                     </div>
                     <div class="field">
-                        <input type="text" name="Staff_ID" required value'.$_SESSION["Staff_ID"].'>
+                        <input type="text" name="Staff_ID" required value='.$_SESSION["Staff_ID"].'>
                     </div>
                 </div>
                 <div class="section">

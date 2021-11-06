@@ -56,7 +56,7 @@ session_start();
         <div class="Features">
         <div class="function">
         <img src="image/Manage-Product.png" width="60px"> 
-        <a href="#">Manage Products</a>
+        <a href="view-product.php">Manage Products</a>
         </div>
         
         <div class="function">
