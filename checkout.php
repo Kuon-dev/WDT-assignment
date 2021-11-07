@@ -3,7 +3,7 @@ include ("conn.php");
 ob_start();
 session_start();
 ?>
-
+<!-- ref:https://code-projects.org/online-shopping-system-in-php-with-source-code/ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -225,6 +225,8 @@ session_start();
                                 <input type="text" id="email" class="form-control" name="email" value="'.$_SESSION["user_email"].'" required>
                                 <label for="address">Address</label>
                                 <input type="text" id="adr" class="form-control" name="address" value="'.$_SESSION["user_add"].'" required>
+                                <label for="phnum">Phone Number</label>
+                                <input type="text" id="phn" class="form-control" name="phnum" value="'.$_SESSION["user_phnum"].'" required>
                             </div>
                         
                             <hr>
@@ -286,6 +288,8 @@ session_start();
                                 <input type="text" id="email" class="form-control" name="email" value="'.$_SESSION["user_email"].'" required>
                                 <label for="address">Address</label>
                                 <input type="text" id="adr" class="form-control" name="address" value="'.$_SESSION["user_add"].'" required>
+                                <label for="phnum">Phone Number</label>
+                                <input type="text" id="phn" class="form-control" name="phnum" value="'.$_SESSION["user_phnum"].'" required>
                             </div>
 
                             <hr>
