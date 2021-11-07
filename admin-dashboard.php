@@ -84,7 +84,7 @@ session_start();
         echo "
         <div class='function'>
         <img src='image/signup.png' width='50px'> 
-        <a href='#'>Sign Up New Admin</a>
+        <a href='signup-admin-panel.php'>Sign Up New Admin</a>
         </div>
         ";
             }
