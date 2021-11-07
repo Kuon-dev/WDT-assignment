@@ -66,12 +66,12 @@ session_start();
         
         <div class="function">
         <img src="image/order.png" width="50px"> 
-        <a href="#">View Orders</a>
+        <a href="view-customer-order.php">View Orders</a>
         </div>
         
         <div class="function">
         <img src="image/message.png" width="50px"> 
-        <a href="#">View Customer Message</a>
+        <a href="view-customer-message.php">View Customer Message</a>
         </div>
 
         <?php

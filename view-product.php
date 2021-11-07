@@ -40,7 +40,7 @@ session_start();
         }
 
         .viewProduct td, 
-        th {
+        .viewProduct th {
             border: 1px solid black;
             min-width: 90px;
         }
