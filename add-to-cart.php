@@ -36,7 +36,6 @@ session_start();
             $sql = "INSERT INTO shopping_cart
             (Email,Product_ID, Quantity, Price) 
             VALUES ('$email','$Product_ID','1','$Price')";
-            echo $sql;
             if(mysqli_query($con,$sql)){
                 echo "<script>
                     alert('Product is added in the cart.');
