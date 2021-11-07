@@ -51,7 +51,8 @@ session_start();
 <div id="header"></div>
 <!-- Main Content -->
 <div class="content-area">
-
+    <h2>Orders</h2>
+    <hr>
     <!-- table header -->
     <table class="viewOrder">
         <tr>
