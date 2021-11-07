@@ -56,7 +56,8 @@ include ("conn.php");
 
 <!-- Main Content Area -->
 <div class="content-area">
-
+    <h2>Customer Messages</h2>
+    <hr>
     <!-- table header -->
     <table class="viewMessage">
         <tr>
