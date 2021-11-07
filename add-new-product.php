@@ -120,10 +120,10 @@ include "conn.php";
 <!-- Main Content Area -->
 <div class="content-area">
 <?php 
-    if (isset($_SESSION["$Staff_ID"])) {
+    if (isset($_SESSION["user_id"])) {
         print '
         <!-- form -->
-        <form action="#" method="post" enctype="multipart/form-data" >
+        <form action="add-product.php" method="post" enctype="multipart/form-data" >
     
             <div id="container">
             <h2>Add New Product</h2>
@@ -194,10 +194,18 @@ include "conn.php";
                 </div>
                 <div class="section">
                     <div class="label">
-                        Supplier ID
+                        Product Status
                     </div>
                     <div class="field">
-                        <input type="text" name="Supplier_ID" required>
+                        <input type="text" name="status" required>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="label">
+                        Supplier Name
+                    </div>
+                    <div class="field">
+                        <input type="text" name="Supplier_Name" required>
                     </div>
                 </div>
                 <div class="section">
@@ -205,7 +213,7 @@ include "conn.php";
                         Staff ID
                     </div>
                     <div class="field">
-                        <input type="text" name="Staff_ID" required value='.$_SESSION["Staff_ID"].'>
+                        <input type="text" name="Staff_ID" required value='.$_SESSION["user_id"].'>
                     </div>
                 </div>
                 <div class="section">
@@ -213,7 +221,7 @@ include "conn.php";
                         Upload image
                     </div>
                     <div class="field">
-                        <input type="file" name="contact_pic">
+                        <input type="file" name="IMG">
                     </div>
                 </div>
                 <div class="section">
@@ -250,29 +258,17 @@ include "conn.php";
 <?php
 
     if(isset($_POST['submitBtn'])) {
-        
-        //INSERT INTO product()
-
-        $product_name = $_POST['Product_Name'];
-        $brand = $_POST['Brand'];
-        $typeOfAnimal = $_POST['Type_of_Animal'];
-        $category = $_POST['Category'];
-        $description = $_POST['Description'];
-        $price = $_POST['Price'];
-        $quantity = $_POST['Quantity'];
-        $supplierID = $_POST['Supplier_ID'];
-        $staffID = $_POST['Staff_ID'];
-
-        print_r($_SESSION);
-        print $product_name;
-        print $brand;
-        print $typeOfAnimal;
-        print $category;
-        print $description;
-        print $price;
-        print $quantity;
-        print $supplierID;
-        print $staffID;
+        $Product_Name = $_POST['Product_Name'];
+        $Brand = $_POST['Brand'];
+        $Type_of_Animal = $_POST['Type_of_Animal'];
+        $Category = $_POST['Category'];
+        $Description = $_POST['Description'];
+        $Price = $_POST['Price'];
+        $Quantity = $_POST['Quantity'];
+        $status = $_POST['status'];
+        $Supplier_Name = $_POST['Supplier_Name'];
+        $Staff_ID = $_POST['Staff_ID'];
+        $IMG=$_FILES['IMG']['tmp_name'];
     }
 
 ?>
