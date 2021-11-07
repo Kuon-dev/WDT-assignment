@@ -9,7 +9,7 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Paws Heaven</title>
+        <title>Paws Heaven Admin Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@ session_start();
         
         <div class="function">
         <img src="image/supplier.png" width="60px"> 
-        <a href="#">Manage Supplier</a>
+        <a href="manage-supplier.php">Manage Supplier</a>
         </div>
         
         <div class="function">

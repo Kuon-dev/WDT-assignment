@@ -151,137 +151,47 @@ if (isset($_POST["submitBtn"])) {
 
     <!-- form -->
     <form action="#" method="post" enctype="multipart/form-data" >
-        <input type="hidden" name="productID" value="<?php print $row['Product_ID'] ?>">
+        <input type="hidden" name="supplierID" value="<?php print $row['Supplier_ID'] ?>">
         <div id="container">
-        <h2>Edit Product</h2>
+        <h2>Edit Supplier</h2>
             <div class="section">
                 <div class="label">
-                    Product Name
+                    Supplier Name
                 </div>
                 <div class="field">
-                    <input type="text" name="Product_Name" required  value="<?php $row["Product_Name"] ?>">
+                    <input type="text" name="supplierName" required  value="<?php $row["Supplier_Name"] ?>">
                 </div>
             </div>
             <div class="section">
                 <div class="label">
-                    Brand
+                    Street
                 </div>
                 <div class="field">
-                    <input type="text" name="Brand" required  value="<?php $row["Brand"] ?>">
+                    <input type="text" name="street" required  value="<?php $row["Street"] ?>">
                 </div>
             </div>
             <div class="section">
                 <div class="label">
-                    Type of Animal
-                </div>
-                <div class="field" style="padding-top:10px;">
-                    <input type="radio" name="Type_of_Animal" 
-                    <?php 
-                        if ($row["Type of Animal"] == "Dog") {
-                            print 'checked="checked"';
-                        }
-                    ?>
-                    value="Dog" required> &nbsp;&nbsp;Dog &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="Type_of_Animal" 
-                    <?php 
-                        if ($row["Type of Animal"] == "Cat") {
-                            print 'checked="checked"';
-                        }
-                    ?>
-                    value="Cat" required> &nbsp;&nbsp;Cat 
-                </div>
-            </div>
-            <div class="section">
-                <div class="label">
-                    Category
+                    City
                 </div>
                 <div class="field">
-                    <select name="Category" required>
-
-                        <option value="">Please select</option>
-
-                        <option value="Food"
-                        <?php
-                            if ($row['Category'] == "Food") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Food</option>
-
-                        <option value="Toy" 
-                        <?php
-                            if ($row['Category'] == "Toy") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Toy</option>
-
-                        <option value="Hygiene"
-                        <?php
-                            if ($row['Category'] == "Hygiene") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Hygiene</option>
-
-                        <option value="Vitamin" 
-                        <?php
-                            if ($row['Category'] == "Vitamin") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Vitamin</option>
-
-                        <option value="Discount"
-                        <?php
-                            if ($row['Category'] == "Discount") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Discount</option>
-
-                        <option value="Package"
-                        <?php
-                            if ($row['Category'] == "Package") {?>
-                            selected="selected"
-
-                        <?php  } ?>
-                        >Package</option>
-                        </select>
-                    </div>
-            </div>
-            <div class="section">
-                <div class="label">
-                    Description
-                </div>
-                <div class="field" style="padding-top:10px;">
-                    <textarea name="Description" id="" cols="30" rows="3" placeholder="Type here...." required>
-                        <?php $row["Description"] ?>
-                    </textarea>
-                </div>
-            </div>
-            <div class="section" style="padding-top:15px;">
-                <div class="label">
-                    Price
-                </div>
-                <div class="field">
-                    <input type="number" name="Price" required  value="<?php $row["Price"] ?>">
+                    <input type="text" name="city" required  value="<?php $row["City"] ?>">
                 </div>
             </div>
             <div class="section">
                 <div class="label">
-                    Quantity
+                    Zipcode
                 </div>
                 <div class="field">
-                    <input type="number" name="Quantity" required  value="<?php $row["Quantiy"] ?>">
+                    <input type="text" name="zipcode" required  value="<?php $row["Zipcode"] ?>">
                 </div>
             </div>
             <div class="section">
                 <div class="label">
-                    Upload image
+                    State
                 </div>
                 <div class="field">
-                    <input type="file" name="contact_pic">
+                    <input type="text" name="state" required  value="<?php $row["State"] ?>">
                 </div>
             </div>
             <div class="section">
