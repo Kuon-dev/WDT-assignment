@@ -105,7 +105,7 @@
              while ($row=mysqli_fetch_assoc($mysql_run)) {
                 $Product_ID=$row['Product_ID'];
                 $Price=$row["Price"];
-                 if ($row['Type of Animal']=="Cat"){
+                 if ($row['Type_of_Animal']=="Cat"){
                      $data ='<div class="childbox" onclick="redirect()">
                      <img src="data:image/jpg;base64,'.base64_encode($row['Product_Image']).'" width="200px" height="240px"/>
                      
