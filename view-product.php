@@ -44,6 +44,10 @@ session_start();
             border: 1px solid black;
             min-width: 90px;
         }
+        .new-product-container {
+            text-align: right;
+            padding-right: 50px;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +55,18 @@ session_start();
 <div id="header"></div>
 <!-- Main Content -->
 <div class="content-area">
+<!-- title -->
+<h2>Products</h2>
+    <hr>
 
+    <!-- add new product button -->
+    <div class="new-product-container">
+        <a href="add-new-product.php">
+            Add New Product
+        </a>
+    </div>
+
+    <hr>
     <!-- table header -->
     <table class="viewProduct">
         <tr>
