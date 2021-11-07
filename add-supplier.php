@@ -29,7 +29,7 @@
     VALUES
     ('$_POST[Supplier_ID]','$_POST[Supplier_Name]','$_POST[Street]','$_POST[City]','$_POST[Zipcode]','$_POST[State]')";
 
-    AND 
+    AND
 
     $sql="INSERT INTO supplier_contact (Supplier_ID, Supplier_Contact)
     VALUES
@@ -44,7 +44,7 @@
         </script>';
         }
     }
-    }
+    
         //close connection  
         mysqli_close($con);
 ?>

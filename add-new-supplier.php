@@ -119,7 +119,7 @@ include "conn.php";
 <!-- Main Content Area -->
 <div class="content-area">
 <?php 
-    if (isset($_SESSION["$user_id"])) {
+    if (isset($_SESSION["user_id"])) {
         print '
         <!-- form -->
         <form action="add-supplier.php" method="post" enctype="multipart/form-data" >
