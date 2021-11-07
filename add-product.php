@@ -22,7 +22,7 @@
     }
     else{
     //if the data not exist then add the data into database
-        $sql="INSERT INTO product (Product_Name, Brand, Type of Animal, Category, Description, Price, Quantity, Supplier_ID, Staff_ID, Product_Image)
+        $sql="INSERT INTO product (Product_Name, Brand, Type_of_Animal, Category, Description, Price, Quantity, Supplier_ID, Staff_ID, Product_Image)
         VALUES
         ('$_POST[Product_Name]','$_POST[Brand]','$_POST[Type_of_Animal]','$_POST[Category]','$_POST[Description]','$_POST[Price]','$_POST[Quantity]','$_POST[Supplier_ID]','$_POST[Staff_ID]','$_POST[IMG]')";
         if (!mysqli_query($con,$sql)) {
@@ -31,8 +31,8 @@
             else {
             session_start();
             echo '<script>
-            alert('Product had been added.');
-            window.location.href='';
+            alert("Product had been added.");
+            window.location.href="admin-dashboard.php";
             </script>';
             }
         }

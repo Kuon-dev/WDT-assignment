@@ -2,27 +2,6 @@
 ob_start();
 session_start();
 include "conn.php";
-
-
-if (isset($_POST["submitBtn"])) {
-    $sql_submit = "UPDATE products SET
-    ProductName = '$_POST[Product_Name]',
-    Brand = '$_POST[Brand]',
-    Type_of_Animal = '$_POST[Type_of_Animal]',
-    Category = '$_POST[Category]',
-    Description = '$_POST[Description]',
-    Price = '$_POST[Price]',
-    Quantity = '$_POST[Quantity]',
-    Product_Image = '$_POST[Product_Image]',
-
-    WHERE Product_ID = $_POST[Product_ID]";
-
-    // if succesful
-    if (mysqli_query($con, $sql_submit)) {
-        mysqli_close($con);
-        print "<script>alert('Product Information Updated!'); window.location.href='admin-dashboard.php';</script>";
-    }
-}
 ?>
 
 <!-- 0:18:30 -->
@@ -142,7 +121,7 @@ if (isset($_POST["submitBtn"])) {
 <div class="content-area">
 <?php 
 
-    $Product_ID = intval($_GET['Product_ID']);
+    $Product_ID = $_GET['Product_ID'];
     $sql = mysqli_query($con, "SELECT * FROM product WHERE Product_ID = $Product_ID");
     while ($row = mysqli_fetch_array($sql))
     {
@@ -150,16 +129,24 @@ if (isset($_POST["submitBtn"])) {
 ?>
 
     <!-- form -->
-    <form action="#" method="post" enctype="multipart/form-data" >
-        <input type="hidden" name="productID" value="<?php print $row['Product_ID'] ?>">
+    <form action="edit-product-process.php" method="post" enctype="multipart/form-data" >
+        <input type="hidden" name="Product_ID" value="<?php echo $row['Product_ID'] ?>">
         <div id="container">
         <h2>Edit Product</h2>
+            <div class="section">
+                <div class="label">
+                    Product Image
+                </div>
+                <div class="field">
+                <?php echo'<img src="data:image/jpg;base64,'.base64_encode($row['Product_Image']).'" width="200px" height="240px"/>'?>
+                </div>
+            </div>
             <div class="section">
                 <div class="label">
                     Product Name
                 </div>
                 <div class="field">
-                    <input type="text" name="Product_Name" required  value="<?php $row["Product_Name"] ?>">
+                    <input type="text" name="Product_Name" required  value="<?php echo $row["Product_Name"] ?>">
                 </div>
             </div>
             <div class="section">
@@ -167,7 +154,7 @@ if (isset($_POST["submitBtn"])) {
                     Brand
                 </div>
                 <div class="field">
-                    <input type="text" name="Brand" required  value="<?php $row["Brand"] ?>">
+                    <input type="text" name="Brand" required  value="<?php echo $row["Brand"] ?>">
                 </div>
             </div>
             <div class="section">
@@ -177,14 +164,14 @@ if (isset($_POST["submitBtn"])) {
                 <div class="field" style="padding-top:10px;">
                     <input type="radio" name="Type_of_Animal" 
                     <?php 
-                        if ($row["Type of Animal"] == "Dog") {
+                        if ($row["Type_of_Animal"] == "Dog") {
                             print 'checked="checked"';
                         }
                     ?>
                     value="Dog" required> &nbsp;&nbsp;Dog &nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="Type_of_Animal" 
                     <?php 
-                        if ($row["Type of Animal"] == "Cat") {
+                        if ($row["Type_of_Animal"] == "Cat") {
                             print 'checked="checked"';
                         }
                     ?>
@@ -255,8 +242,8 @@ if (isset($_POST["submitBtn"])) {
                     Description
                 </div>
                 <div class="field" style="padding-top:10px;">
-                    <textarea name="Description" id="" cols="30" rows="3" placeholder="Type here...." required>
-                        <?php $row["Description"] ?>
+                    <textarea name="Description" id="" cols="30" rows="3" required>
+                        <?php echo $row["Description"] ?>
                     </textarea>
                 </div>
             </div>
@@ -265,7 +252,7 @@ if (isset($_POST["submitBtn"])) {
                     Price
                 </div>
                 <div class="field">
-                    <input type="number" name="Price" required  value="<?php $row["Price"] ?>">
+                    <input type="float" name="Price" required  value="<?php echo $row["Price"] ?>">
                 </div>
             </div>
             <div class="section">
@@ -273,15 +260,7 @@ if (isset($_POST["submitBtn"])) {
                     Quantity
                 </div>
                 <div class="field">
-                    <input type="number" name="Quantity" required  value="<?php $row["Quantiy"] ?>">
-                </div>
-            </div>
-            <div class="section">
-                <div class="label">
-                    Upload image
-                </div>
-                <div class="field">
-                    <input type="file" name="contact_pic">
+                    <input type="number" name="Quantity" required  value="<?php echo $row["Quantity"] ?>">
                 </div>
             </div>
             <div class="section">
@@ -307,4 +286,17 @@ if (isset($_POST["submitBtn"])) {
 <?php
     }
     mysqli_close($con);
+?>
+
+<?php
+if (isset($_POST["submitBtn"])) {
+    $Product_Name = $_POST["Product_Name"];
+    $Brand = $_POST["Brand"];
+    $Type_of_Animal = $_POST["Type_of_Animal"];
+    $Category = $_POST["Category"];
+    $Description = $_POST["Description"];
+    $Price = $_POST["Price"];
+    $Quantity = $_POST["Quantity"];
+    $Product_ID = $_POST['Product_ID'];
+}
 ?>
