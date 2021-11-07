@@ -62,7 +62,7 @@ session_start();
 
     <div class="new-supplier-container">
         <a href="#">
-            <button class="add-new-supplier">New Supplier</button>
+            Add New Supplier
         </a>
     </div>
 
@@ -102,19 +102,18 @@ session_start();
             <td><?php print $Zipcode ?></td>
             <td><?php print $State ?></td>
             <?php
-            echo'
-            <td>
-                <a href="edit-supplier.php?Supplier_ID = '.$Supplier_ID.'">
-                    Edit
-                </a>
-            </td>
-
-            <td>
-                <a href="delete-supplier.php?Supplier_ID = '.$Supplier_ID.'">
-                    Delete
-                </a>
-            </td>
-        </tr>';?>
+                print '
+                <td>
+                    <a href="edit-supplier.php?Supplier_ID='.$Supplier_ID.'">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a href="delete-supplier.php?Supplier_ID='.$Supplier_ID.'">
+                        Delete
+                    </a>
+                </td> '; ?>
+        </tr>
 
         <?php 
                 }
