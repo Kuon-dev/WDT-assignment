@@ -122,7 +122,7 @@ include "conn.php";
 <?php 
 
     $Product_ID = $_GET['Product_ID'];
-    $sql = mysqli_query($con, "SELECT * FROM product WHERE Product_ID = $Product_ID");
+    $sql = mysqli_query($con, "SELECT * FROM product WHERE Product_ID = '$Product_ID'");
     while ($row = mysqli_fetch_array($sql))
     {
 
