@@ -77,7 +77,7 @@ session_start();
                 $Product_ID = $row["Product_ID"];
                 $Product_Name = $row['Product_Name'];
                 $Brand = $row['Brand'];
-                $Type_of_Animal = $row['Type of Animal'];
+                $Type_of_Animal = $row['Type_of_Animal'];
                 $Category = $row['Category'];
                 $Description = $row['Description'];
                 $Price = $row['Price'];
@@ -114,17 +114,18 @@ session_start();
                 <td><?php print $Brand ?></td>
                 <td><?php print $Type_of_Animal ?></td>
                 <td><?php print $Category ?></td>
-                <!-- <td><?php print $Description ?></td> -->
                 <td><?php print $Price ?></td>
                 <td><?php print $Quantity ?></td>
                 <td><?php print $Product_Status ?></td>
                 <td><?php print $Supplier_Name ?></td>
                 <td><?php print $Staff_Name ?></td>
+                <?php
+                print '
                 <td>
-                    <a href="edit-product.php">
+                    <a href="edit-product.php?Product_ID = '.$Product_ID.'">
                         Edit
                     </a>
-                </td>
+                </td> '; ?>
                 <?php
                 print '
                 <td>

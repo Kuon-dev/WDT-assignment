@@ -101,18 +101,20 @@ session_start();
             <td><?php print $City ?></td>
             <td><?php print $Zipcode ?></td>
             <td><?php print $State ?></td>
+            <?php
+            echo'
             <td>
-                <a href="#">
+                <a href="edit-supplier.php?Supplier_ID = '.$Supplier_ID.'">
                     Edit
                 </a>
             </td>
 
             <td>
-                <a href="delete-supplier.php">
+                <a href="delete-supplier.php?Supplier_ID = '.$Supplier_ID.'">
                     Delete
                 </a>
             </td>
-        </tr>
+        </tr>';?>
 
         <?php 
                 }
