@@ -61,7 +61,7 @@ session_start();
     <hr>
 
     <div class="new-supplier-container">
-        <a href="#">
+        <a href="add-new-supplier.php">
             Add New Supplier
         </a>
     </div>
