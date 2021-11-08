@@ -77,6 +77,8 @@ session_start();
             <th>City</th>
             <th>Zipcode</th>
             <th>State</th>
+            <th>Contact Number 1</th>
+            <th>Contact Number 2</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -87,6 +89,8 @@ session_start();
             while($row = mysqli_fetch_array($sql)) {
                 $Supplier_ID = $row["Supplier_ID"];
                 $Supplier_Name = $row['Supplier_Name'];
+                $Contact_Number1 = $row['Contact_Number1'];
+                $Contact_Number2 = $row['Contact_Number2'];
                 $Street = $row['Street'];
                 $City = $row['City'];
                 $Zipcode = $row['Zipcode'];
@@ -101,6 +105,8 @@ session_start();
             <td><?php print $City ?></td>
             <td><?php print $Zipcode ?></td>
             <td><?php print $State ?></td>
+            <td><?php print $Contact_Number1 ?></td>
+            <td><?php print $Contact_Number2 ?></td>
             <?php
                 print '
                 <td>

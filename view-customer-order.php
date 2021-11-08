@@ -69,7 +69,7 @@ session_start();
         
         <?php  
             // get order info from orders table
-            $sql = mysqli_query($con, "SELECT * FROM orders");
+            $sql = mysqli_query($con, "SELECT * FROM orders ORDER BY Order_ID  desc");
             while($row = mysqli_fetch_array($sql)) {
                 $Order_ID = $row["Order_ID"];
                 $Customer_Email = $row["Email"];
@@ -82,7 +82,7 @@ session_start();
                 $Receipt_Code = $row['Receipt_Code'];
         
                 // get product info from product table
-                $sql_run = mysqli_query($con, "SELECT * FROM product WHERE Product_ID = '$Product_ID';");
+                $sql_run = mysqli_query($con, "SELECT * FROM product WHERE Product_ID = '$Product_ID'");
                 while ($row = mysqli_fetch_assoc($sql_run)) {
                     $Product_Name = $row['Product_Name'];
         ?>
