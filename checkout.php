@@ -341,12 +341,9 @@ session_start();
                 </div>
 
                 <?php
-                //get the data from database and display
+                //get the data from database and display items in cart
                 if (isset($_SESSION["user_email"])) {
                     $Email=$_SESSION["user_email"];
-                    $run=mysqli_query($con, "SELECT Email, SUM(Price*Quantity) As Total_Payment FROM shopping_cart HAVING SUM(Price*Quantity)=(SELECT MAX(Total_Payment) FROM (SELECT SUM(Price*Quantity) As Total_Payment FROM shopping_cart WHERE Email='$Email') AS Total_Payment)");
-                    while ($row=mysqli_fetch_assoc($run)) {
-                        $Total_Payment=$row['Total_Payment'];  
                     $mysql_run = mysqli_query($con, "SELECT * FROM shopping_cart WHERE Email='$Email'");
                     while ($row=mysqli_fetch_assoc($mysql_run)) {
                         $Product_ID = $row["Product_ID"];
@@ -370,10 +367,16 @@ session_start();
                             </div>
                         </div>
                         ';
-                        
-                        
                         }
-                    }
+                    }?>
+                    <?php
+                    //calculate total price
+                    if (isset($_SESSION["user_email"])) {
+                        $Email=$_SESSION["user_email"];
+                    $run=mysqli_query($con, "SELECT Email, SUM(Quantity*Price) As Total_Payment FROM shopping_cart WHERE Email='$Email'");
+                    while ($row=mysqli_fetch_assoc($run)) {
+                        $Total_Payment=$row['Total_Payment'];  
+                        $Total=round($Total_Payment, 2);
                     echo '
                     <!-- checkout price -->
                     <div class="checkoutPrice">
@@ -381,12 +384,12 @@ session_start();
                             Total :
                         </div>
                         <div class="checkoutTotalPrice">    
-                        '.round($Total_Payment, 2).'
+                        '.$Total.'
                         </div>
                     </div>
                 </div>
                 '; 
-                
+                    }
                 }
                 }
                 ?>
