@@ -137,14 +137,14 @@ session_start();
                 <?php
                 print '
                 <td>
-                    <a href="edit-product.php?Product_ID = '.$Product_ID.'">
+                    <a href="edit-product.php?Product_ID='.$Product_ID.'">
                         Edit
                     </a>
                 </td> '; ?>
                 <?php
                 print '
                 <td>
-                    <a href="delete-product.php?Product_ID = '.$Product_ID.'">
+                    <a href="delete-product.php?Product_ID='.$Product_ID.'">
                         Delete
                     </a>
                 </td> '; ?>

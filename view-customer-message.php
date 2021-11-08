@@ -69,7 +69,7 @@ include ("conn.php");
         <?php
 
         // get order info from orders table
-            $sql = mysqli_query($con, "SELECT * FROM message");
+            $sql = mysqli_query($con, "SELECT * FROM message ORDER BY Message_ID desc");
             while($row = mysqli_fetch_array($sql)) {
                 $Customer_Name = $row["Name"];
                 $Email = $row['Email'];
