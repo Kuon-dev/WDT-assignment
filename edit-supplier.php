@@ -142,6 +142,22 @@ include "conn.php";
             </div>
             <div class="section">
                 <div class="label">
+                    Contact Number 1
+                </div>
+                <div class="field">
+                    <input type="text" name="Supplier_Contact1" required value="<?php echo $row["Contact_Number1"] ?>">
+                </div>
+            </div>
+            <div class="section">
+                <div class="label">
+                    Contact Number 2
+                </div>
+                <div class="field">
+                    <input type="text" name="Supplier_Contact2" value="<?php echo $row["Contact_Number2"] ?>">
+                </div>
+            </div>
+            <div class="section">
+                <div class="label">
                     Street
                 </div>
                 <div class="field">
@@ -200,6 +216,8 @@ include "conn.php";
 <?php
 if (isset($_POST["submitBtn"])) {
     $Supplier_Name = $_POST["supplierName"];
+    $Supplier_Contact1 = $_POST['Supplier_Contact1'];
+    $Supplier_Contact2 = $_POST['Supplier_Contact2'];
     $Street = $_POST["street"];
     $City = $_POST["city"];
     $Zipcode = $_POST["zipcode"];
