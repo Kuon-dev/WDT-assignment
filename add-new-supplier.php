@@ -144,10 +144,18 @@ include "conn.php";
                 </div>
                 <div class="section">
                     <div class="label">
-                        Supplier Contact Number
+                        Contact Number 1
                     </div>
                     <div class="field">
-                        <input type="text" name="Supplier_Contact" required>
+                        <input type="text" name="Supplier_Contact1" required>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="label">
+                        Contact Number 2
+                    </div>
+                    <div class="field">
+                        <input type="text" name="Supplier_Contact2">
                     </div>
                 </div>
                 <div class="section">
@@ -221,20 +229,12 @@ include "conn.php";
 
         $Supplier_ID = $_POST['Supplier_ID'];
         $Supplier_Name = $_POST['Supplier_Name'];
-        $Supplier_Contact = $_POST['Supplier_Contact'];
+        $Supplier_Contact1 = $_POST['Supplier_Contact1'];
+        $Supplier_Contact2 = $_POST['Supplier_Contact2'];
         $Street = $_POST['Street'];
         $City = $_POST['City'];
         $Zipcode = $_POST['Zipcode'];
         $State = $_POST['State'];
-
-        print_r($_SESSION);
-        print $Supplier_ID;
-        print $Supplier_Name;
-        print $Supplier_Contact;
-        print $Street;
-        print $City;
-        print $Zipcode;
-        print $State;
     }
 
 ?>

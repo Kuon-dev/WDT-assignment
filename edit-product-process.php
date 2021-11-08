@@ -22,7 +22,6 @@ if (isset($_POST["submitBtn"])) {
     Quantity = '$Quantity'
     WHERE Product_ID = '$Product_ID'");
     // if succesful
-    
     print "<script>alert('Product Information Updated!'); window.location.href='view-product.php';</script>";
     
 }
