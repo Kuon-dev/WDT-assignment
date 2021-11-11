@@ -52,8 +52,7 @@ if(isset($_SESSION["user_email"])){
     $delete = mysqli_query($con,"DELETE FROM shopping_cart WHERE Email='$Email' AND Product_ID='$Product_ID'");
     $n=$n+1;
     echo '<script>
-    alert("Product had been checkout. You could view the order in Purchase History. Tracking number will be sent to your email.");
-    window.location.href = "index.php";
+    window.location.href = "purchase-success.php";
     </script>';
     }
     }
