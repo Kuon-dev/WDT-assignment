@@ -245,11 +245,11 @@ session_start();
                                 
                                 <div class="form-group" id="card-number-field">
                                 <label for="cardNumber">Card Number</label>
-                                <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
+                                <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
                                 <label for="expdate">Exp Date</label>
-                                <input type="text" id="expdate" name="expdate" class="form-control" placeholder="12/22"required>
+                                <input type="text" id="expdate" name="expdate" class="form-control" placeholder="xx/xx" pattern="[0-9]{2}/[0-9]{2}"required>
                                 <label for="cvv">CVV</label>
-                                <input type="text" class="form-control" name="cvv" id="cvv" required>
+                                <input type="text" class="form-control" name="cvv" id="cvv" placeholder="xxx" pattern="[0-9]{3}" required>
                                 </div>
                             </div>
                             
