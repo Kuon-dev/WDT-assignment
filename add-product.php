@@ -27,9 +27,9 @@
     }
     else{
     //if the data not exist then add the data into database
-        $mysql_run=mysqli_query($con, "SELECT * FROM supplier WHERE Supplier_Name = '$Supplier_Name';");
+        $mysql_run = mysqli_query($con, "SELECT * FROM supplier WHERE Supplier_Name = '$Supplier_Name';");
         if(mysqli_num_rows($mysql_run)==1){
-            while ($row=mysqli_fetch_assoc($mysql_run)) {
+            while ($row = mysqli_fetch_assoc($mysql_run)) {
             $Supplier_ID=$row["Supplier_ID"];
             $sql="INSERT INTO product (Product_Name, Brand, Type_of_Animal, Category, Description, Price, Quantity, Product_Status, Supplier_ID, Staff_ID, Product_Image)
             VALUES

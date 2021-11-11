@@ -21,6 +21,7 @@ if (isset($_POST["submitBtn"])) {
     Contact_Number1='$Supplier_Contact1',
     Contact_Number2='$Supplier_Contact2'
     WHERE Supplier_ID = '$Supplier_ID'");
+    
     // if succesful
     print "<script>alert('Supplier Information Updated!'); 
     window.location.href='manage-supplier.php';
