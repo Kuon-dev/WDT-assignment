@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 08, 2021 at 01:59 AM
+-- Generation Time: Nov 11, 2021 at 04:20 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -74,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `member` (
 
 INSERT INTO `member` (`Email`, `Member_Name`, `Contact_Number`, `Address`, `Password`) VALUES
 ('katherine@gmail.com', 'Katherine', '0128927718', '1,Jalan123,Taman1,83000BatuPahat Johor', 'katherine123'),
+('test@gmail.com', 'test', '0128763309', '4,Jalan 4, Taman Indah, 54000 Kuala Lumpur', 'pass'),
 ('ali01@gmail.com', 'Ali', '0178829102', '3,Jln 9,Tmn Putera,54000, Kuala Lumpur', 'ali0101'),
 ('david@gmail.com', 'David', '0198667821', '5,Jln 7, Tmn Flora, 83000 Batu Pahat, Johor', 'Daviddavid'),
 ('jovane05@gmail.com', 'Jovane', '0127836251', '6,Jalan Puteri 5, Taman Puteri Indah, 54000 Kuala Lumpur', 'jovane0501'),
@@ -160,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`Product_ID`),
   KEY `Supplier_ID` (`Supplier_ID`),
   KEY `Staff_ID` (`Staff_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
@@ -211,13 +212,14 @@ CREATE TABLE IF NOT EXISTS `shopping_cart` (
   PRIMARY KEY (`Cart_ID`,`Email`,`Product_ID`),
   KEY `Product_ID` (`Product_ID`),
   KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `shopping_cart`
 --
 
 INSERT INTO `shopping_cart` (`Cart_ID`, `Email`, `Product_ID`, `Quantity`, `Price`) VALUES
+(78, 'katherine@gmail.com', '4', 1, 97.2),
 (77, 'katherine@gmail.com', '13', 1, 289),
 (74, 'david@gmail.com', '6', 1, 49),
 (73, 'david@gmail.com', '1', 1, 278),
@@ -246,7 +248,8 @@ CREATE TABLE IF NOT EXISTS `staff` (
 INSERT INTO `staff` (`Staff_ID`, `Staff_Name`, `Password`, `Position`, `Contact_Number`) VALUES
 ('W001', 'Ahmad', 'W001Ahmad', 'Manager', '0138279911'),
 ('W002', 'Catherine', 'W002Catherine', 'Staff', '0129862789'),
-('W003', 'Bob', 'W003Bob', 'Staff', '01111927711');
+('W003', 'Bob', 'W003Bob', 'Staff', '01111927711'),
+('test', 'test', 'pass', 'Manager', '0192871100');
 
 -- --------------------------------------------------------
 
