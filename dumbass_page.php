@@ -43,11 +43,11 @@
 <body>
     <!-- Announcement -->
     <div>
-        <h1>
+    <h1 style="color: white">
             Hey Buddy, your account has been created!
         </h1>
-        <h1>
-            Let's start your journey now!
+        <h1 style="color: white">
+            Let's start your journey now by loggin in again!
         </h1>
         <img src="image/happydoggy.jpg">
     </div>
