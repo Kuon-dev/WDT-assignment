@@ -85,7 +85,7 @@ else if(isset($_POST['save-btn'])) {
     }
 else
     {
-        /*sorry your id is not match*/
+        /*no ID found*/
         echo"<script>alert('Update unsuccessful');</script>";
     }
 ?>
