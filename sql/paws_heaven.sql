@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 INSERT INTO `orders` (`Order_ID`, `Email`, `Product_ID`, `Quantity`, `Price`, `Purchase_Date`, `Shipping_Address`, `Card_Number`, `Receipt_Code`) VALUES
 (1, 'katherine@gmail.com', '1', 2, 278, '2021-11-07 09:30:51', '1,Jalan123,Taman1,83000BatuPahat Johor', NULL, 'R003'),
-(2, 'ali01@gmail.com', '5', 1, 20.9, '2021-11-07 09:33:46', '3,Jln 9,Tmn Putera,54000, Kuala Lumpur', '1233902899990123', NULL),
+(2, 'ali01@gmail.com', '5', 1, 20.9, '2021-11-07 09:33:46', '3,Jln 9,Tmn Putera,54000, Kuala Lumpur', '1233-9028-9999-0123', NULL),
 (3, 'ali01@gmail.com', '5', 1, 20.9, '2021-11-07 09:55:11', '3,Jln 9,Tmn Putera,54000, Kuala Lumpur', NULL, 'C0981'),
 (3, 'ali01@gmail.com', '4', 1, 97.2, '2021-11-07 09:55:11', '3,Jln 9,Tmn Putera,54000, Kuala Lumpur', NULL, 'C0981'),
 (4, 'katherine@gmail.com', '7', 1, 33.8, '2021-11-07 11:15:13', '1,Jalan123,Taman1,83000BatuPahat Johor', NULL, 'R021'),
