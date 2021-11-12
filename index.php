@@ -23,7 +23,7 @@
         });
     
         function redicrect() {
-            window.location.href = "https://playvalorant.com/en-us/";
+            window.location.href = "index.php";
         }
     </script>
 
